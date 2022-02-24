@@ -4,12 +4,11 @@ author:
   name: James Syu
   link: https://github.com/n1046728
 date: 2022-02-15 09:49:05 +0800
-categories: [excel, vba]
+categories: [Excel, vba]
 tags: [vba]     # TAG names should always be lowercase
 excerpt_separator: <!--more-->
 ---
 Memo how to crack vba password
-
 <!--more-->
 
 ## Crack vba password
