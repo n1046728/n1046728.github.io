@@ -17,7 +17,7 @@ on:
       - '**'
 
 jobs:
-  ci:
+  continuous-delivery:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,5 +32,5 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Test Site
-        run: bash tools/deploy.sh --dry-run
+      - name: Deploy
+        run: bash tools/deploy.sh
