@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - main
-    branches-ignore:
-      - 'release/**'
-      - 'docs'
     tags-ignore:
       - '**'
     paths-ignore:
