@@ -4,7 +4,7 @@ author:
   name: James Syu
   link: https://github.com/n1046728
 date: 2022-02-28 23:11:35 +0800
-categories: [version control, github]
+categories: []
 tags: [line notify,apps script]     # TAG names should always be lowercase
 excerpt_separator: <!--more-->
 ---

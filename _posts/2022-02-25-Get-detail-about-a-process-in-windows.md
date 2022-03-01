@@ -11,7 +11,7 @@ excerpt_separator: <!--more-->
 Memo how to get details about process
 <!--more-->
 
-## 
+## get process info
 1. open task manager
 2. select tab detail 
 3. get pid that you want for example 15544 
@@ -39,7 +39,7 @@ TotalMilliseconds : 5318505.476
 ```shell
 Get-Process -Id 15544 | select StartTime
 ```
-10.get info
+10. get info
 ```shell
 StartTime
 ---------
