@@ -13,7 +13,7 @@ This application will send message to your line using line notify service.
 <!--more-->
 
 
-## lilne notify
+## line notify
 ### create line notify token
 1. login in line notify
 2. click right coner select box and choose person page
@@ -53,6 +53,7 @@ This application will send message to your line using line notify service.
 10. copy your application url
 
 ## Testing
+### Using js
 1. open chrome console
 2. load jquery
    ```js
@@ -71,6 +72,13 @@ This application will send message to your line using line notify service.
    ```
 4. get message on line app
 
+### Using python
+```python
+url = 'your application url'
+mydata = {'msg' : msg}
+
+request.post(url,data=mydata,verify =False)
+```
 ## reference
 * [Run jQuery in Chrome Console - doobom's blog](https://doobom.me/run-jquery-in-chrome-console)
 * [自建 LINE Notify 訊息通知 - oxxostudio blog](https://www.oxxostudio.tw/articles/201806/line-notify.html)
