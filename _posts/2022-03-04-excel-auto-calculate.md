@@ -1,4 +1,5 @@
-title: How to fix excel formula auto-calculate
+---
+itle: How to fix excel formula auto-calculate
 author:
   name: James Syu
   link: https://github.com/n1046728
@@ -7,7 +8,7 @@ categories: [excel, function]
 tags: [excel , vba]     # TAG names should always be lowercase
 excerpt_separator: <!--more-->
 ---
-Excel third-party addin help us to solve complicated numeric problem.Sometimes all cells refresh by add-in but some cells need to using f2 + Enter to enforce it refresh.
+Excel third-party addin help us to solve complicated numeric problem.Sometimes all cells refresh by add-in but some cells need to using f2 + Enter to enforce it refresh.This article tell u how to solve it.
 <!--more-->
 
 ## solution
@@ -16,7 +17,7 @@ Excel third-party addin help us to solve complicated numeric problem.Sometimes a
 Selection.Value = Selection.FormulaR1C1
 ```
 ### function
-* u can this cell function add now function 
+* your cell add now function 
 > f() + now()*0
 
 ## reference 
