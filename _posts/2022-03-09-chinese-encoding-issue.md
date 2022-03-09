@@ -1,3 +1,4 @@
+---
 title: Chinese encoding issue
 author:
   name: James Syu
@@ -19,27 +20,29 @@ This article tell u how to simulate string write to db that come from some appli
 
 ## Demo 
 ```java
-    try {
-        // simulate a db charset UTF-8
-        System.setOut(new PrintStream(new File("a.txt"), "UTF-8"));
+try {
+    // simulate a db charset UTF-8
+    System.setOut(new PrintStream(new File("a.txt"), "UTF-8"));
 
-        // your edit is UTF-8，complie using UTF-8
-        String s = "測試";
-        byte[] bs = s.getBytes("UTF-8"); //encoding to {e6,b8,ac,e8,a9,a6} 
+    // your edit is UTF-8，complie using UTF-8
+    String s = "測試";
+    byte[] bs = s.getBytes("UTF-8"); //encoding to {e6,b8,ac,e8,a9,a6} 
 
-        // for (int i = 0 ;i<bs.length;i++) {
-        //     System.out.println(Integer.toHexString(bs[i]));
-        // }
+    // for (int i = 0 ;i<bs.length;i++) {
+    //     System.out.println(Integer.toHexString(bs[i]));
+    // }
 
-        // simulate get response parameter using big5
-        String param = new String(bs, "Big5");// decoding bs array using Big5.You can use visit Query BIG-5 Code website using bs array,and will get 
+    // simulate get response parameter using big5
+    String param = new String(bs, "Big5");// decoding bs array using Big5.You can use visit Query BIG-5 Code website using bs array,and will get 皜祈岫 decoding(e6 b8 ac e8 a9 a6)
 
-        // simulate write to db
-        System.out.println(param);//param be encoded using UTF-8 in the txt file and will see 皜祈岫(e7 9a 9c e7 a5 88 e5 b2 ab)
-    } catch (Exception e) {
+    // simulate write to db
+    System.out.println(param);//param be encoded using UTF-8 in the txt file and will see 皜祈岫 encoding utf8(e7 9a 9c e7 a5 88 e5 b2 ab)
+} catch (Exception e) {
 
-    }
+}
 ```
+## encoding and decoding
+![](../../assets/img/blog/20220309/encoding.jpg)
 
 ## reference 
 * [Query BIG-5 Code - **ace33022**](https://ace33022.github.io/big5code/)
