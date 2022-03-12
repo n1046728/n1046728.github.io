@@ -25,6 +25,6 @@ ok                        \\tp123\IPC$    Microsoft Windows Network
 ```
 
 ## reference 
-* [How to restore access to a windows shared folder after host password change? - stackoverflow ozzylee](https://stackoverflow.com/questions/54898305/how-to-restore-access-to-a-windows-shared-folder-after-host-password-change)
-* [How to delete cached temporarily credentials for a network share on a Windows machine without rebooting or logging off - serverfault](https://serverfault.com/questions/451387/how-to-delete-cached-temporarily-credentials-for-a-network-share-on-a-windows-ma)
-* [Windows Credential Manager - Window OSHub](http://woshub.com/saved-passwords-windows-credential-manager/)
+* [How to restore access to a windows shared folder after host password change? - **stackoverflow ozzylee**](https://stackoverflow.com/questions/54898305/how-to-restore-access-to-a-windows-shared-folder-after-host-password-change)
+* [How to delete cached temporarily credentials for a network share on a Windows machine without rebooting or logging off - **serverfault**](https://serverfault.com/questions/451387/how-to-delete-cached-temporarily-credentials-for-a-network-share-on-a-windows-ma)
+* [Windows Credential Manager - **Window OSHub**](http://woshub.com/saved-passwords-windows-credential-manager/)
