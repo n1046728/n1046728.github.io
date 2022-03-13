@@ -31,6 +31,14 @@ Cat cat1 = new Cat();
 //Using Class.forName(String className)method
 //consider class present in com.test package
 Cat cat2 = (Cat)Class.forName("com.test.Cat").newInstance() ;
+
+//Using clone() method
+Cat cat3 = (Cat)cat1.clone();
+
+//Deserialization:De-serialization is technique of reading an object from the saved state in a file.
+FileInputStream file = new FileInputStream(filename);
+ObjectInputStream in = in ObjectInputStream(file);
+Object obj = in.readObject();
 ```
 
 ### Memory model
@@ -78,6 +86,7 @@ public int factorial(int n){
 ## Overloading
 ### Definition
 > Overloading allows different methods to have the same name,but different signatures where the signature can differ by the number of input parameters or type of input parameters or both.
+
 ![](../../assets/img/blog/java-notebook/ch06/Overloading_01.jpg)
 
 ### Excersise
