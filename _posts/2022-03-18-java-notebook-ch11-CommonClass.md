@@ -89,8 +89,56 @@ System.out.println(i5 == j5); //True
 ```
 
 ## String Class
+### initiating
 ![](../../assets/img/blog/java-notebook/ch11/string_01.jpg
 .jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_02.jpg
+.jpg)
+```java
+String = "java";
+name = "tom";
+final char[]value={'a','b','b'};
+char[]v2 ={'t','o','m'};
+//value = v2 ; //can not change value address
+```
+### Memory allotment of String
+![](../../assets/img/blog/java-notebook/ch11/string_03.jpg
+.jpg)
+```java
+String a ='abc';
+String b = 'abc';
+System.out.println(a.equals(b));//true
+System.out.println(a.==b);//true
+
+String a1 =new String('abc');
+String b1 = new String('abc');
+System.out.println(a1.equals(b1));//true
+System.out.println(a1==b1);//false
+```
+![](../../assets/img/blog/java-notebook/ch11/string_04.jpg
+.jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_05.jpg
+.jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_06.jpg
+.jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_07.jpg
+.jpg)
+
+### features
+>Strings in Java are Objects that are backed internally by a char array. Since arrays are immutable(cannot grow), Strings are immutable as well. Whenever a change to a String is made, an entirely new String is created. 
+![](../../assets/img/blog/java-notebook/ch11/string_08.jpg
+.jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_09.jpg
+.jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_10.jpg
+.jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_11.jpg
+.jpg)
+![](../../assets/img/blog/java-notebook/ch11/string_12.jpg
+.jpg)
+
+### method
+
 ## String Buffer
 
 ## Math class
