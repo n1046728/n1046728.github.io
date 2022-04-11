@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Vba Notebook</title>
+      <link href="/2022/04/09/2022-04-09-vba-notebook/"/>
+      <url>/2022/04/09/2022-04-09-vba-notebook/</url>
+      
+        <content type="html"><![CDATA[<h2 id="vba-microsoft-doc"><a href="#vba-microsoft-doc" class="headerlink" title="vba microsoft doc"></a><a href="https://docs.microsoft.com/en-ie/office/vba/api/overview/">vba microsoft doc</a></h2><h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><ul><li><a href="https://www.bolterauer.de/consulting/dev/vbatools/vba_logging/VBALogging.html#Installation">install framework</a></li></ul><h2 id="Common-function"><a href="#Common-function" class="headerlink" title="Common function"></a>Common function</h2><ul><li><a href="https://docs.microsoft.com/zh-tw/office/vba/language/reference/user-interface-help/instr-function">InStr</a>：指定另一個字串內某個字串的第一個出現位置</li><li><a href="https://www.howtoexcel.org/split-text-by-delimiter/">split</a></li><li><a href="https://www.techonthenet.com/excel/formulas/replace_vba.php">replace</a></li></ul><h2 id="data-structure"><a href="#data-structure" class="headerlink" title="data structure"></a>data structure</h2><ul><li>ArrayList<ul><li><a href="https://excelmacromastery.com/vba-arraylist/">https://excelmacromastery.com/vba-arraylist/</a></li><li><a href="https://www.automateexcel.com/vba/arraylist/">https://www.automateexcel.com/vba/arraylist/</a></li></ul></li><li><a href="https://excelmacromastery.com/vba-dictionary/">Dictionary</a> </li><li><a href="https://stackoverflow.com/questions/1296225/iterate-over-vba-dictionaries">Dictionary-for each</a></li><li><a href="https://www.automateexcel.com/vba/declare-dim-create-initialize-array/">Array</a></li><li><a href="https://www.automateexcel.com/vba/loop-through-array/">Array-for each</a></li></ul><h2 id="How-to-Select-a-Range-x2F-Cell-using"><a href="#How-to-Select-a-Range-x2F-Cell-using" class="headerlink" title="How to Select a Range&#x2F;Cell using"></a>How to Select a Range&#x2F;Cell using</h2><ul><li><a href="https://excelchamps.com/vba/select-range/#Select_a_Column">How to Select a Range&#x2F;Cell using VBA in Excel</a></li><li><a href="https://docs.microsoft.com/en-us/previous-versions/office/troubleshoot/office-developer/select-cells-rangs-with-visual-basic">How to Select a Range of Cells on the Active Worksheet</a></li><li><a href="https://stackoverflow.com/questions/439510/can-a-vba-function-in-excel-return-a-range">Can a VBA function in Excel return a range?</a></li></ul><h2 id="VBA-overloading"><a href="#VBA-overloading" class="headerlink" title="VBA overloading"></a>VBA overloading</h2><ul><li><a href="https://stackoverflow.com/questions/64436/function-overloading-and-udf-in-excel-vba">Function Overloading</a></li></ul><h2 id="conversion"><a href="#conversion" class="headerlink" title="conversion"></a>conversion</h2><ul><li><a href="https://docs.microsoft.com/zh-tw/office/vba/language/concepts/getting-started/type-conversion-functions">類型轉換函數</a></li></ul><h2 id="special-case"><a href="#special-case" class="headerlink" title="special case"></a>special case</h2><ul><li><a href="https://www.thespreadsheetguru.com/blog/2015/1/13/how-to-use-vba-code-to-copy-text-to-the-clipboard">How To Use VBA Code To Copy Text To The Clipboard</a></li><li><a href="https://zhuanlan.zhihu.com/p/136217579">regular expression</a></li><li><a href="https://regex101.com/r/i1UX7I/1?_sc_token=v2%253AUYqdEpVJBv4aHULGkq6HR3e6Ym1Bx9Ur6Ux4JBNQVGAZrZfLwBjiNW5eHXXyZycdNr8968PeokVBM5FejM-gIodNkCQGT_2JlkjiTojFhgLvj7wEW103vDp2U-sp9o3Gq37G48sJbiorFaoqk4wihBwjR11S5fKXuUAiWRYT_xjgH-FiZ_g4FqOxRwFhZHSZ">regular expression 101</a> </li><li><a href="https://www.automateexcel.com/vba/copy-to-clipboard/">VBA Copy to Clipboard</a></li><li><a href="https://answers.microsoft.com/en-us/outlook_com/forum/all/paste-clipboard-to-outlook-with-vba/a1a27b25-1534-42ac-ae82-281e66ba30b6"><strong>paste clipboard to outlook with vba</strong></a></li><li><a href="https://www.automateexcel.com/vba/hyperlinks/#Add_a_Hyperlink_with_VBA">Add a Hyperlink with VBA</a></li><li><a href="https://www.automateexcel.com/vba/regex/">VBA Regex</a></li><li><a href="https://www.automateexcel.com/vba/send-emails-outlook/">VBA Send Emails from Excel through Outlook</a></li></ul><h2 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h2><ul><li>物件assign must using keyword <strong>Set</strong><h2 id="vba-tutorial"><a href="#vba-tutorial" class="headerlink" title="vba tutorial"></a>vba tutorial</h2></li><li><a href="https://ithelp.ithome.com.tw/users/20007221/ironman/833">Excel VBA 的眉眉角角</a></li><li><a href="https://www.automateexcel.com/">automat excel</a></li><li><a href="https://analystcave.com/excel-regex-tutorial/">Excel Regex Tutorial</a></li></ul><h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul><li><a href="https://www.jcchouinard.com/python-automation-using-task-scheduler/">setting task schedule</a></li></ul><p>–</p><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul><li><a href="http://www.bolterauer.de/consulting/dev/vbatools/vba_logging/VBALogging.html#Downloadsourcefiles">Logging for VBA - <strong>official site</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> excel </category>
+          
+          <category> vba </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Share folder can&#39;t access after ad password changed</title>
+      <link href="/2022/03/10/2022-03-10-share-folder-connect-problem/"/>
+      <url>/2022/03/10/2022-03-10-share-folder-connect-problem/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story"><a href="#Story" class="headerlink" title="Story"></a>Story</h2><p>This occur I enter remote windows server using local account and share folder using ad account.After I change ad password then I can’t access share forder.This article will tell u how to solve it.</p><h2 id="cause-and-solve"><a href="#cause-and-solve" class="headerlink" title="cause and solve"></a>cause and solve</h2><blockquote><p>Network table keep your previous connection information ,so u can use command <strong>net use &#x2F;delete</strong>.It will clear connection info.<br>You reaccess share folder will show Window Security window and enter account&#x2F;new password.</p></blockquote><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">net use</span></span><br><span class="line"></span><br><span class="line">Status        Local       Remote                 Network</span><br><span class="line">--------------------------------------------------------------------------</span><br><span class="line">ok                        \\tp123\IPC$    Microsoft Windows Network</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">net use * /delete</span> </span><br></pre></td></tr></table></figure><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul><li><a href="https://stackoverflow.com/questions/54898305/how-to-restore-access-to-a-windows-shared-folder-after-host-password-change">How to restore access to a windows shared folder after host password change? - stackoverflow ozzylee</a></li><li><a href="https://serverfault.com/questions/451387/how-to-delete-cached-temporarily-credentials-for-a-network-share-on-a-windows-ma">How to delete cached temporarily credentials for a network share on a Windows machine without rebooting or logging off - serverfault</a></li><li><a href="http://woshub.com/saved-passwords-windows-credential-manager/">Windows Credential Manager - Window OSHub</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Chinese encoding issue</title>
+      <link href="/2022/03/09/2022-03-09-chinese-encoding-issue/"/>
+      <url>/2022/03/09/2022-03-09-chinese-encoding-issue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This article tell u how to simulate string write to db that come from some application.You will know how it works</p><h2 id="Preliminary-knowledge"><a href="#Preliminary-knowledge" class="headerlink" title="Preliminary knowledge"></a>Preliminary knowledge</h2><ul><li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#getBytes-java.lang.String-">getBytes - API</a><blockquote><p><strong>Encodes</strong> this String into a sequence of bytes using the named charset,storing the result into a new byte array. </p></blockquote></li><li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#String-byte:A-java.lang.String-">String - API</a> <blockquote><p>Constructs a new String by <strong>decoding</strong> the specified array of bytes using the specified charset.</p></blockquote></li></ul><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// simulate a db charset UTF-8</span></span><br><span class="line">    System.setOut(<span class="keyword">new</span> <span class="title class_">PrintStream</span>(<span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;a.txt&quot;</span>), <span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// your edit is UTF-8，complie using UTF-8</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;測試&quot;</span>;</span><br><span class="line">    <span class="type">byte</span>[] bs = s.getBytes(<span class="string">&quot;UTF-8&quot;</span>); <span class="comment">//encoding to &#123;e6,b8,ac,e8,a9,a6&#125; </span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// for (int i = 0 ;i&lt;bs.length;i++) &#123;</span></span><br><span class="line">    <span class="comment">//     System.out.println(Integer.toHexString(bs[i]));</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// simulate get response parameter using big5</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">param</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(bs, <span class="string">&quot;Big5&quot;</span>);<span class="comment">// decoding bs array using Big5.You can use visit Query BIG-5 Code website using bs array,and will get 皜祈岫 decoding(e6 b8 ac e8 a9 a6)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// simulate write to db</span></span><br><span class="line">    System.out.println(param);<span class="comment">//param be encoded using UTF-8 in the txt file and will see 皜祈岫 encoding utf8(e7 9a 9c e7 a5 88 e5 b2 ab)</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="encoding-and-decoding"><a href="#encoding-and-decoding" class="headerlink" title="encoding and decoding"></a>encoding and decoding</h2><p><img src="/../../assets/img/blog/20220309/encoding.jpg"></p><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul><li><a href="https://ace33022.github.io/big5code/">Query BIG-5 Code - <strong>ace33022</strong></a></li><li><a href="http://www.mytju.com/classcode/tools/encode_utf8.asp">Query UTF-8 Code - <strong>心缘地方</strong></a></li><li><a href="https://www.javaworld.com.tw/jute/post/view?bid=21&id=282136&tpg=1&ppg=1&sty=1&age=0#282136">如果在資料庫中原始資料就已經是亂碼的話 還有救嗎? - <strong>JWorld@TW</strong></a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> encoding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to fix excel formula auto-calculate</title>
+      <link href="/2022/03/04/2022-03-04-excel-auto-calculate/"/>
+      <url>/2022/03/04/2022-03-04-excel-auto-calculate/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story"><a href="#Story" class="headerlink" title="Story"></a>Story</h2><p>Excel third-party addin help us to solve complicated numeric problem.Sometimes all cells refresh by add-in but some cells need to using f2 + Enter to enforce it refresh.This article tell u two way to solve it.</p><h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><h3 id="vba"><a href="#vba" class="headerlink" title="vba"></a>vba</h3><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Selection.Value = Selection.FormulaR1C1</span><br></pre></td></tr></table></figure><h3 id="function"><a href="#function" class="headerlink" title="function"></a>function</h3><ul><li>u can this cell function add now function <blockquote><p>f() + now()*0</p></blockquote></li></ul><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul><li><a href="https://stackoverflow.com/questions/24060831/force-f2enter-on-range-of-cells">Force “F2”+”Enter” on range of cells - <strong>stackoverflow Thomas F.</strong> </a></li><li><a href="https://www.excelcampus.com/functions/formulas-not-calculating/">How to Fix Excel Formulas that are Not Calculating or Updating - <strong>EXCEL Campus</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> excel </category>
+          
+          <category> function </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+            <tag> excel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to get details about a process in windows</title>
+      <link href="/2022/03/01/2022-02-25-Get-detail-about-a-process-in-windows/"/>
+      <url>/2022/03/01/2022-02-25-Get-detail-about-a-process-in-windows/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Stroy"><a href="#Stroy" class="headerlink" title="Stroy"></a>Stroy</h2><p>Memo how to get details about process</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2><ol><li>open task manager</li><li>select tab detail </li><li>get pid that you want for example 15544 </li><li>enter win</li><li>type power shell</li><li><strong>get how long a process runs type below</strong><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-TimeSpan(Get-Process -Id 15544).StartTime</span><br></pre></td></tr></table></figure></li><li>get information<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Days              : 0</span><br><span class="line">Hours             : 1</span><br><span class="line">Minutes           : 28</span><br><span class="line">Seconds           : 38</span><br><span class="line">Milliseconds      : 505</span><br><span class="line">Ticks             : 53185054760</span><br><span class="line">TotalDays         : 0.0615567763425926</span><br><span class="line">TotalHours        : 1.47736263222222</span><br><span class="line">TotalMinutes      : 88.6417579333333</span><br><span class="line">TotalSeconds      : 5318.505476</span><br><span class="line">TotalMilliseconds : 5318505.476</span><br></pre></td></tr></table></figure></li><li><strong>get process start time</strong><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-Process -Id 15544 | select StartTime</span><br></pre></td></tr></table></figure></li></ol><p>10.get info</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">StartTime</span><br><span class="line">---------</span><br><span class="line">2022/3/1 上午 08:29:39</span><br></pre></td></tr></table></figure><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul><li><a href="https://webcache.googleusercontent.com/search?q=cache:ufcr0d_MvNQJ:https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-easily-find-how-long-a-process-runs/+&cd=14&hl=zh-TW&ct=clnk&gl=tw">Use PowerShell to Easily Find How Long a Process Runs - <strong>Microsoft</strong></a></li><li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process?view=powershell-7.2">Get-Process - <strong>Microsoft doc</strong></a> </li><li><a href="https://stackoverflow.com/questions/34142041/how-to-get-the-process-start-time-in-powershell">How to get the process start time in PowerShell - <strong>Stack overflow (gwtharg)</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+          <category> power shell </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> power shell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Line notify with Apps script</title>
+      <link href="/2022/02/28/2022-02-28-line-notify-with-apps-script/"/>
+      <url>/2022/02/28/2022-02-28-line-notify-with-apps-script/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This article will teach u how to crate a apps script application.<br>This application will send message to your line using line notify service.</p><h2 id="line-notify"><a href="#line-notify" class="headerlink" title="line notify"></a>line notify</h2><h3 id="create-line-notify-token"><a href="#create-line-notify-token" class="headerlink" title="create line notify token"></a>create line notify token</h3><ol><li>login in line notify</li><li>click right coner select box and choose person page</li><li>scroll down the page and publish token</li><li>enter your own token name</li><li>choose u whant group  name and click publish</li><li>copy token and save to other place</li></ol><h2 id="apps-script"><a href="#apps-script" class="headerlink" title="apps script"></a>apps script</h2><h3 id="create-app-script-application"><a href="#create-app-script-application" class="headerlink" title="create app script application"></a>create app script application</h3><ol><li>login in google</li><li>enter <a href="https://script.google.com/home">https://script.google.com/home</a></li><li>click left coner plus sign to create new project</li><li>naming your project name</li><li>coding <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">doPost</span>(<span class="params">e</span>) &#123;</span><br><span class="line"><span class="keyword">var</span> token = <span class="string">&#x27;xxxxxxx&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> param = e.<span class="property">parameter</span>;</span><br><span class="line"><span class="keyword">var</span> msg = param.<span class="property">msg</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">UrlFetchApp</span>.<span class="title function_">fetch</span>(<span class="string">&#x27;https://notify-api.line.me/api/notify&#x27;</span>, &#123;</span><br><span class="line">        <span class="string">&#x27;headers&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;Authorization&#x27;</span>: <span class="string">&#x27;Bearer &#x27;</span> + token,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&#x27;method&#x27;</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;payload&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;message&#x27;</span>:msg</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>click right coner deploy icon</li><li>choose new deploy</li><li>add description…and deploy</li><li>Authorize…and allow</li><li>copy your application url</li></ol><h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><h3 id="Using-js"><a href="#Using-js" class="headerlink" title="Using js"></a>Using js</h3><ol><li>open chrome console</li><li>load jquery<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jqry = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">jqry.<span class="property">src</span> = <span class="string">&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>].<span class="title function_">appendChild</span>(jqry);</span><br><span class="line">jQuery.<span class="title function_">noConflict</span>();</span><br></pre></td></tr></table></figure></li><li>test code<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">post</span>(<span class="string">&#x27;your application url&#x27;</span>,</span><br><span class="line"> &#123;<span class="attr">msg</span>:<span class="string">&#x27;hello world&#x27;</span>&#125;,</span><br><span class="line"> <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(e);</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></li><li>get message on line app</li></ol><h3 id="Using-python"><a href="#Using-python" class="headerlink" title="Using python"></a>Using python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">&#x27;your application url&#x27;</span></span><br><span class="line">mydata = &#123;<span class="string">&#x27;msg&#x27;</span> : msg&#125;</span><br><span class="line"></span><br><span class="line">request.post(url,data=mydata,verify =<span class="literal">False</span>)</span><br></pre></td></tr></table></figure><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul><li><a href="https://doobom.me/run-jquery-in-chrome-console">Run jQuery in Chrome Console - doobom’s blog</a></li><li><a href="https://www.oxxostudio.tw/articles/201806/line-notify.html">自建 LINE Notify 訊息通知 - oxxostudio blog</a></li><li><a href="https://script.google.com/">Apps Script</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> line notify </tag>
+            
+            <tag> apps script </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Github Notebook</title>
+      <link href="/2022/02/25/2022-02-26-github/"/>
+      <url>/2022/02/25/2022-02-26-github/</url>
+      
+        <content type="html"><![CDATA[<h2 id="How-to-create-a-new-branch"><a href="#How-to-create-a-new-branch" class="headerlink" title="How to create a new branch"></a>How to create a new branch</h2><p><img src="/assets/img/blog/github/createBranch.gif" alt="how to create new branch"></p><h2 id="How-to-delete-a-branch"><a href="#How-to-delete-a-branch" class="headerlink" title="How to delete a branch"></a>How to delete a branch</h2><p><img src="/assets/img/blog/github/deleteBranch.gif" alt="How to delete a branch"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> version control </category>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to crack vba password</title>
+      <link href="/2022/02/15/2022-02-15-FirstPost/"/>
+      <url>/2022/02/15/2022-02-15-FirstPost/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Memo how to crack vba password</p><h2 id="Crack-vba-password"><a href="#Crack-vba-password" class="headerlink" title="Crack vba password"></a>Crack vba password</h2><ul><li><a href="https://www.monspy.com/crack-excel-vba-password/">https://www.monspy.com/crack-excel-vba-password/</a></li><li><a href="http://gary-li.blogspot.com/2018/07/excel.html">http://gary-li.blogspot.com/2018/07/excel.html</a></li><li><a href="https://stackoverflow.com/questions/1026483/is-there-a-way-to-crack-the-password-on-an-excel-vba-project">stackoverflow solution</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> excel </category>
+          
+          <category> vba </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to solve mybatis batch insert to sqlserver losing precision</title>
+      <link href="/2021/10/27/2021-10-27-mybatis-sqlserver-batch-insert-loss-precision/"/>
+      <url>/2021/10/27/2021-10-27-mybatis-sqlserver-batch-insert-loss-precision/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story"><a href="#Story" class="headerlink" title="Story"></a>Story</h2><p>使用mybatia寫入sqlserver db時的問題，當xml檔採用foreach的方式進行批量寫入時，BigDecimal的變數會因每筆寫入的精度不一致而採最低的精度寫入到db中</p><h2 id="solve"><a href="#solve" class="headerlink" title="solve"></a>solve</h2><h3 id="cast"><a href="#cast" class="headerlink" title="cast"></a>cast</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertList&quot;</span> &gt;</span></span><br><span class="line">  insert into salary_list (id, user_id, type,base_salary)</span><br><span class="line">  VALUES</span><br><span class="line">  <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">&quot;list&quot;</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">separator</span> =<span class="string">&quot;,&quot;</span>&gt;</span></span><br><span class="line">    (</span><br><span class="line">        #&#123;item.id,jdbcType=BIGINT&#125;,</span><br><span class="line">        #&#123;item.userId,jdbcType=BIGINT&#125;,</span><br><span class="line">        #&#123;item.type,jdbcType=INTEGER&#125;,</span><br><span class="line">        cast(#&#123;item.baseSalary,jdbcType=DECIMAL&#125; as decimal(18,2))</span><br><span class="line">    )</span><br><span class="line">  <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="using-sqljdbc4-driver"><a href="#using-sqljdbc4-driver" class="headerlink" title="using sqljdbc4 driver"></a>using sqljdbc4 driver</h3><p>筆者嘗試使用此方式，但未成功。</p><p>–</p><h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul><li><a href="http://39.100.145.25/blog/detail/79654906433">mybatis批量插入bigDecimal数据丢失精度问题</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Mybatis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mybatis </tag>
+            
+            <tag> sqlserver </tag>
+            
+            <tag> BigDecimal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
